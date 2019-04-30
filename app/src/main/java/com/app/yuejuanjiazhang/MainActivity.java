@@ -16,6 +16,7 @@ import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
+    String ENV = "development1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // 设置允许JS弹窗
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webView.addJavascriptInterface(new JavaSriptInterface(this), "android");
-        webView.setWebContentsDebuggingEnabled(true);
+        //webView.setWebContentsDebuggingEnabled(true);
         Log.v("YJX",String.valueOf(Build.VERSION.SDK_INT));
         if (Build.VERSION.SDK_INT >= 16) {
             try{
@@ -47,8 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        //webView.loadUrl("file:///android_asset/index.html");
-        webView.loadUrl("http://10.200.6.66:10032/templates/index.html");
+        if(ENV.equals("development")){
+            webView.loadUrl("http://192.168.2.56:10032/templates/index.html");
+        }else{
+            webView.loadUrl("file:///android_asset/build/templates/index.html");
+        }
 
         //chrome://inspect/#devices
         webView.setOnKeyListener(new View.OnKeyListener(){

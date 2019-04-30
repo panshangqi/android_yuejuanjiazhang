@@ -9,11 +9,10 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: "",
-            password: "",
-            ip: ""
+            username: "16031620018",
+            password: "0",
+            ip: "49.4.48.115"
         };
-
     }
     componentDidMount(){
 
@@ -43,6 +42,19 @@ class Login extends Component {
     }
     loginButtonClick(){
         console.log(this.state.username, this.state.password, this.state.ip)
+        qishi.soap.get('ParentLogin',{
+            username: this.state.username,
+            password: this.state.password,
+            ip: this.state.ip
+        },function(data){
+
+            console.log(data)
+            if(data.codeid == qishi.config.responseOK){
+                console.log('登陆成功')
+            }else{
+                console.log(data.message)
+            }
+        })
     }
     render() {
         return (

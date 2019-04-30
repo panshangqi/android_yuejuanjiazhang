@@ -17,23 +17,7 @@ var compiler;
 var server;
 
 var default_proxy = {
-    '/client/*': {
-        //target: "http://10.200.4.143:3202",
-        target: "http://10.200.3.16:3202",
-        //target: "http://10.6.15.81:3200",
-        //target: "http://scanuploadoss.17zuoye.com",
-        changeOrigin: true,
-        pathRewrite: {
-            "^/client": ""
-        }
-    },
-    '/local/*': {
-        target: "http://127.0.0.1:10092",
-        changeOrigin: true,
-        pathRewrite: {
-            "^/local": ""
-        }
-    }
+
 };
 
 var final_proxy = {};

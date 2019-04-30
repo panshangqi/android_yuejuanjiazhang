@@ -1,9 +1,12 @@
 @img _root: /static/imgs;
+html,
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin: 0;
+  height: 100%;
 }
 .theme_color {
   background-color: #2D6EDB;
@@ -34,10 +37,11 @@ body {
   font-family: "Apple-HeiTi";
   src: url(.././fonts/NotoSansHans-Regular.ttf);
 }
-html,
-body {
-  font-family: 'Apple-HeiTi';
+/*
+html,body{
+	font-family: 'Apple-HeiTi';
 }
+*/
 .ant-btn:hover {
   border-color: rgba(45, 110, 219, 0.87);
   color: rgba(45, 110, 219, 0.87);
@@ -168,84 +172,44 @@ body {
   background-color: #969696;
 }
 @img _root: /static/imgs;
-.login_html .page_background {
+.login_html .backgroundimage {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background-color: #F0F2F5;
 }
-.login_html .exam_info_and_btn {
-  margin-left: 200px;
-  margin-top: 10px;
-  display: flex;
-}
-.login_html .exam_info_and_btn .scan_btn {
-  margin-left: 20px;
-}
-.login_html .login_box {
-  width: 360px;
-  margin: 100px auto;
-  position: relative;
-}
-.login_html .login_box ._title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-}
-.login_html .login_box ._sub_title {
-  text-align: center;
-  font-size: 14px;
-  margin-top: 10px;
-}
-.login_html .login_box .error {
-  font-size: 12px;
-  margin-top: 10px;
-}
-.login_html .to_back {
+.login_html .content {
   position: absolute;
-  left: 30px;
-  top: 20px;
+  width: 100%;
+  height: 100%;
   z-index: 10;
-}
-.login_html ._drop_username {
-  position: absolute;
-  width: 360px;
+  top: 0;
   left: 0;
-  top: 70px;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
-.login_html ._drop_username ._drop_icon {
-  position: absolute;
-  right: 2px;
-  top: 0px;
-  z-index: 100;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  box-sizing: border-box;
-  padding-left: 12px;
-  padding-top: 16px;
-}
-.login_html ._drop_username ._drop_icon:hover {
+.login_html .content .title {
+  padding: 10px;
+  margin-top: 1rem;
   color: #333;
+  text-align: center;
+  font-size: 1.4rem;
+  height: 6rem;
 }
-._MenuBox {
-  max-height: 200px;
-  overflow-y: auto;
-  opacity: 0.95;
+.login_html .content .input_style {
+  margin-top: 1.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
 }
-/*
-.ant-dropdown-menu{
-	max-height: 200px;
-	overflow-y: auto;
+.login_html .content .button_style {
+  margin-top: 1.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  font-size: 1rem;
 }
-*/
-.user_ul {
-  display: flex;
-  justify-content: space-between;
-}
-.user_ul .delete_user {
-  cursor: pointer;
-}
-.user_ul .delete_user:hover {
-  color: #ff0000;
+.login_html .content .forget_passwd {
+  text-align: right;
+  margin-top: 0.5rem;
 }
