@@ -47,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        webView.loadUrl("file:///android_asset/index.html");
+        //webView.loadUrl("file:///android_asset/index.html");
+        webView.loadUrl("http://10.200.6.66:10032/templates/index.html");
+
         //chrome://inspect/#devices
         webView.setOnKeyListener(new View.OnKeyListener(){
             @Override
