@@ -50,7 +50,7 @@ module.exports = {
                         loader: 'less-loader',
                         options: {
                             globalVars:{
-                               'theme_color': '#2D6EDB',
+                               'theme_color': '#FF9647',
                                'theme_red': '#FF796B',
                                'theme_green': '#13D469',
                                'img_root': '/static/imgs'

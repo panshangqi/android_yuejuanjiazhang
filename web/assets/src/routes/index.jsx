@@ -1,11 +1,24 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router,Route,Redirect, Link, Switch} from 'react-router-dom';
 import { createHashHistory } from 'history';
+
 import 'antd/dist/antd.less'
 import 'react-virtualized/styles.css'; // only needs to be imported once
 import './index.less'
-import Login from '@pages/Login/index.jsx'
+import Login from '@pages/Login'
+import PageFooter from '@components/PageFooter'
+import Page from '@components/Page'
+import Personal from '@pages/Personal'
+import ModifyPassword from '@pages/ModifyPassword'
+import ServicePhone from '@pages/ServicePhone'
+import GeneralQuestion from '@pages/GeneralQuestion'
+import ExamAnalysis from '@pages/ExamAnalysis'
+import ResultReport from '@pages/ResultReport'
+import QuestionDetail from '@pages/QuestionDetail'
+import Home from '@pages/Home'
+
 
 var history = createHashHistory();
 //loading-component 动态组件加载s
@@ -20,12 +33,20 @@ document.onreadystatechange = function () {
 }
 ReactDOM.render(
     <Router history={history}>
-
+        <Page>
             <Switch>
                 <Route exact path="/login" component={Login} />
+                <Route exact path="/personal" component={Personal}/>
+                <Route exact path="/modify_password" component={ModifyPassword}/>
+                <Route exact path="/service_phone" component={ServicePhone}/>
+                <Route exact path="/general_question" component={GeneralQuestion}/>
+                <Route exact path="/exam_analysis" component={ExamAnalysis}/>
+                <Route exact path="/result_report" component={ResultReport}/>
+                <Route exact path="/home" component={Home}/>
+                <Route exact path="/question_detail" component={QuestionDetail}/>
                 <Route component={Login} />
             </Switch>
-
+        </Page>
     </Router>
     , document.getElementById('root'));
 

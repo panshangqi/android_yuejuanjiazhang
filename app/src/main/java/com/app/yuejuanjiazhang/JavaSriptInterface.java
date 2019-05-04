@@ -18,4 +18,30 @@ public class JavaSriptInterface {
 
         Toast.makeText(context, ssss, Toast.LENGTH_LONG).show();
     }
+/*
+    @JavascriptInterface
+    public void setCookies(String cookies){
+        MyCookies.setCookies(context, "http://localhost_cookies" , cookies);
+    }
+
+    @JavascriptInterface
+    public String getCookies(){
+        return MyCookies.getCookie(context, "http://localhost_cookies");
+    }
+
+    @JavascriptInterface
+    public void clearCookies(String cookies){
+        MyCookies.removeCookie(context);
+    }
+
+    @JavascriptInterface
+    public String getENV(){
+        return Public.ENV;
+    }
+
+    @JavascriptInterface
+    public void flushWebview(){
+
+    }
+    */
 }

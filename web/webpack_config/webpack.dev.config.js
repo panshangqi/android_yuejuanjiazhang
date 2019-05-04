@@ -17,7 +17,10 @@ var compiler;
 var server;
 
 var default_proxy = {
-
+    "/exam/*":{
+        "target":"http://49.4.48.115:80",
+        "changeOrigin": true
+    }
 };
 
 var final_proxy = {};

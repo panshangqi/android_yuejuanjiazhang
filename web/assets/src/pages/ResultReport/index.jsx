@@ -1,0 +1,125 @@
+
+import React, { Component } from 'react';
+import qishi from '@components/qishi.jsx';
+import TitleBar from '@components/TitleBar'
+import banyuanbg from '@imgs/banyuanbg.png'
+import pen_001 from '@imgs/pen_001.png'
+import './style.less'
+
+class ResultReport extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            subject_list: [],
+            exam_name: '--/--',
+            class_rank: 0,
+            grade_rank: 0,
+            exam_id: props.location.query ? props.location.query.exam_id : '10001'
+        }
+
+    }
+    componentDidMount(){
+        //考试科目列表
+        var token = qishi.cookies.get_token();
+        var userid = qishi.cookies.get_userid();
+        console.log('token = ' +token, userid, this.state.exam_id)
+        var self = this
+        qishi.http.get('GetOneTestscore',[userid, token, this.state.exam_id],function (data) {
+            console.log(data)
+            if(data.codeid == qishi.config.responseOK){
+                if(data.message.length > 0){
+                    var exam_info = data.message[0];
+                    self.setState({
+                        exam_name: exam_info.examname,
+                        grade_rank: exam_info.njmc,
+                        class_rank: exam_info.bjmc,
+                        subject_list: exam_info.paperscore//data.message[0].paperscore
+                    })
+                }
+            }else{
+                qishi.util.alert(data.message)
+            }
+        })
+
+    }
+    renderSubjectList(){
+        var arr = []
+        for(var i=0; i<this.state.subject_list.length;i+=2){
+            var item1 = this.state.subject_list[i]
+            var item2 = this.state.subject_list[i+1]
+            arr.push(
+                <tr  key={'tr'+i}>
+                    <td key={i+'a'}>
+                        <div className="sub_name">{item1.subjectname}</div>
+                        <div className="sub_score"><span>{item1.stuscore}</span>/{item1.fullscore}分</div>
+                    </td>
+                    {
+                        i+1 < this.state.subject_list.length ? (
+                            <td key={i+'b'}>
+                                <div className="sub_name">{item2.subjectname}</div>
+                                <div className="sub_score"><span>{item2.stuscore}</span>/{item2.fullscore}分</div>
+                            </td>
+                        ):(
+                            <td key={i+'b'}></td>
+                        )
+                    }
+                </tr>
+            )
+        }
+        return arr;
+    }
+    componentWillUnmount(){
+
+        this.setState = (state,callback)=>{
+            return;
+        };
+    }
+    render() {
+        return (
+            <div className="result_report_html">
+                <TitleBar
+                    title="成绩报告"
+                    backgroundColor={qishi.config.theme_color}
+                    history={this.props.history}
+                    to_route="/home"
+                />
+                <img src={banyuanbg} className="banyuan_bg"/>
+                <div className="content">
+                    <div className="exam_name">{this.state.exam_name}</div>
+                    <div className="general_panel">
+                        <div className="left_kont"></div>
+                        <div className="right_kont"></div>
+                        <div className="stu_score"><span>653</span>/852分</div>
+                        <table className="table_stu_score">
+                            <tbody><tr style={{height: '3.5rem'}}>
+                                <td style={{width: '25%',verticalAlign:'bottom'}}>
+                                    <img src={pen_001} style={{width: '3.3rem'}}/>
+                                </td>
+                                <td style={{width: '45%',fontSize: '1.3rem',verticalAlign:'top'}} className="theme_color">
+                                    总成绩
+                                </td>
+                                <td style={{width: '30%', textAlign:'left', verticalAlign:'bottom'}}>
+                                    <span>
+                                        <div>
+                                            <span className="theme_color"> 年级：{this.state.grade_rank}名</span>
+                                        </div>
+                                        <div>
+                                            <span className="theme_color"> 班级：{this.state.class_rank}名</span>
+                                        </div>
+
+                                </span></td>
+                            </tr></tbody>
+                        </table>
+                        <table className="table_subject_list">
+                            <tbody>
+                            {this.renderSubjectList()}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+export default ResultReport;

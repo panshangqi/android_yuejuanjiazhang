@@ -1,21 +1,25 @@
 
 import React, { Component } from 'react';
-import {Button, Input, Checkbox, Icon, Alert, Spin, Menu, Dropdown } from 'antd'
+import {Button, Input } from 'antd'
 import './style.less';
 import qishi from '@components/qishi'
-import login_bg from '@imgs/login_bg.png'
+import login_bg from '@imgs/login_bg.jpg'
 
 class Login extends Component {
     constructor(props) {
         super(props);
+        var userid = qishi.cookies.get_cookies('yuejuan_userid')
+        var ip = qishi.cookies.get_cookies('yuejuan_ip')
+        console.log('init')
+        console.log(userid, ip)
         this.state = {
-            username: "16031620018",
+            username: userid ? userid : "",
             password: "0",
-            ip: "49.4.48.115"
+            ip: ip ? ip: ""
         };
+
     }
     componentDidMount(){
-
 
     }
 
@@ -42,17 +46,25 @@ class Login extends Component {
     }
     loginButtonClick(){
         console.log(this.state.username, this.state.password, this.state.ip)
-        qishi.soap.get('ParentLogin',{
-            username: this.state.username,
-            password: this.state.password,
-            ip: this.state.ip
-        },function(data){
+        qishi.cookies.set_cookies({
+            yuejuan_ip: this.state.ip
+        })
+        console.log(">>>>>>>>>>>>>>>>Login>>>>>>>>>>>>>>")
+        var self = this
+        qishi.http.get('ParentLogin',[this.state.username, this.state.password, this.state.ip] ,function(data){
 
             console.log(data)
             if(data.codeid == qishi.config.responseOK){
                 console.log('登陆成功')
+                qishi.cookies.set_cookies({
+                    yuejuan_userid: self.state.username,
+                    yuejuan_ip: self.state.ip,
+                    yuejuan_token: data.authtoken
+                })
+                self.props.history.push('/home')
             }else{
                 console.log(data.message)
+                qishi.util.alert(data.message)
             }
         })
     }

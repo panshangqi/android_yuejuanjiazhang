@@ -1,0 +1,87 @@
+.result_report_html{
+    width: 100%;
+    .theme_circle_yellow{
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 14px;
+        background-color: @theme_color;
+    }
+    .banyuan_bg{
+        width: 100%;
+        height: 120px;
+    }
+    .content{
+        position: absolute;
+        width: 100%;
+        top: 3.2rem;
+        left:0;
+        bottom: 0;
+        padding: 0 0.8rem 0 0.8rem;
+        text-align: center;
+        .exam_name{
+            text-align: center;
+            color:#fff;
+            font-size: 0.9rem;
+        }
+        .general_panel{
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            min-height: 20rem;
+            padding: 0.8rem;
+            box-shadow: 0 0 8px #ccc;
+            margin-top: 10px;
+            .left_kont{
+                .theme_circle_yellow();
+                left: 0.8rem;
+            }
+            .right_kont{
+                .theme_circle_yellow();
+                right: 0.8rem;
+            }
+            .stu_score{
+                margin-top: 16px;
+                font-size: 1.5rem;
+                span{
+                    font-size: 1.7rem;
+                }
+            }
+            table.table_stu_score{
+                width: 100%;
+                margin-top: 12px;
+                td{
+
+                }
+            }
+            table.table_subject_list{
+                margin-top: 16px;
+                width: 100%;
+                tr{
+                    border-top: 1px solid #ddd;
+                    td{
+                        .sub_name{
+                            padding-top: 3px;
+                            font-weight: bold;
+                        }
+                        .sub_score{
+                            padding-top: 3px;
+                            padding-bottom: 3px;
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    td:first-child{
+                        border-right: 1px solid #ddd;
+                    }
+                    td:last-child{
+
+                    }
+                }
+            }
+        }
+    }
+}

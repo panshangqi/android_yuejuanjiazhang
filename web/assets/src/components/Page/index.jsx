@@ -1,14 +1,8 @@
 
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
-
-
-import { Button, message, Popconfirm } from 'antd';
+import qishi from '@components/qishi.jsx';
 import './style.less';
 
-// const electron = window.require('electron');
-// const {ipcRenderer, remote} = electron;
-// var client_version = remote.app.getVersion();
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +11,12 @@ class Header extends Component {
     render() {
         return (
             <div className="page_base_html">
-                {this.props.children}
+                <div className="environment">
+                    {qishi.config.ENV}
+                </div>
+                <div>
+                    {this.props.children}
+                </div>
             </div>
         );
     }
