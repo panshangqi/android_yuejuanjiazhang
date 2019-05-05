@@ -15,7 +15,9 @@ class ResultReport extends Component {
             exam_name: '--/--',
             class_rank: 0,
             grade_rank: 0,
-            exam_id: props.location.query ? props.location.query.exam_id : '10001'
+            student_score: '-1',
+            full_score: '-1',
+            exam_id: props.location.query ? props.location.query.exam_id : ''
         }
 
     }
@@ -34,6 +36,8 @@ class ResultReport extends Component {
                         exam_name: exam_info.examname,
                         grade_rank: exam_info.njmc,
                         class_rank: exam_info.bjmc,
+                        student_score: exam_info.studentscore,
+                        full_score: exam_info.fullscore,
                         subject_list: exam_info.paperscore//data.message[0].paperscore
                     })
                 }
@@ -102,7 +106,7 @@ class ResultReport extends Component {
                     <div className="general_panel">
                         <div className="left_kont"></div>
                         <div className="right_kont"></div>
-                        <div className="stu_score"><span>653</span>/852分</div>
+                        <div className="stu_score"><span>{this.state.student_score}</span>/{this.state.full_score}分</div>
                         <table className="table_stu_score">
                             <tbody><tr style={{height: '3.5rem'}}>
                                 <td style={{width: '25%',verticalAlign:'bottom'}}>

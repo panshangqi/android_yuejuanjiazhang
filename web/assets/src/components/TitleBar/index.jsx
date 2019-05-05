@@ -11,6 +11,7 @@ class TitleBar extends Component {
         this.title = props.title ? props.title : '--/--'
         this.to_route = props.to_route ? props.to_route: null
         this.back_ico = (props.back_ico == true || props.back_ico == null) ? true: false;
+        this.to_query = props.to_query
         this.style = {}
         if(props.backgroundColor){
             this.style.backgroundColor = props.backgroundColor;
@@ -26,7 +27,10 @@ class TitleBar extends Component {
     backClick(){
         console.log('back to url: ' + this.back_route)
         if(this.to_route && this.props.history){
-            this.props.history.push(this.to_route)
+            this.props.history.push({
+                pathname: this.to_route,
+                query: this.to_query
+            })
         }
     }
     render() {

@@ -5,7 +5,7 @@ console.log("environment: " + process.env.NODE_ENV)
 const Qishi = {};
 Qishi.config = {
     ENV: process.env.NODE_ENV,
-    cookiestr: "userid=16031620018;ip=49.4.48.115;token=4419604AF61EFE64FFFA9D91620102F7", //网页测试
+    cookiestr: "userid=16031620018;ip=49.4.48.115;token=4419604AF61EFE64FFFA9D91620102F7", //网页测试123015001
     responseOK: '0001',
     theme_color: '#FF9647',
     theme_red: '#FF796B'

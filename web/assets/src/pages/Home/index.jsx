@@ -49,7 +49,7 @@ class Home extends Component {
                 })
 
             }else{
-
+                qishi.util.alert(data.message)
             }
         })
     }

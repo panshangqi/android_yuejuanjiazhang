@@ -21,7 +21,7 @@ class ExamAnalysis extends Component {
             subject_list: [],
             question_list: [],
             paper_img_list: [],
-            exam_id: props.location.query ? props.location.query.exam_id : '10001',
+            exam_id: props.location.query ? props.location.query.exam_id: '',
             select_subject_id: _subjectid,
             tableListHeight: 0,
             tableListWidth: 0,
@@ -34,7 +34,7 @@ class ExamAnalysis extends Component {
 
         var token = qishi.cookies.get_token();
         var userid = qishi.cookies.get_userid();
-        console.log('token = ' +token, userid, this.state.exam_id)
+        console.log('ExamAnalysis token = ' +token, userid, this.state.exam_id)
         var self = this
         qishi.http.get('GetOneTestscore',[userid, token, this.state.exam_id],function (data) {
             console.log('GetOneTestscore')
@@ -85,6 +85,8 @@ class ExamAnalysis extends Component {
             var index = $(this).attr('index')
             var item  = self.state.question_list[index]
             console.log(item)
+            item.exam_id = self.state.exam_id
+            item.subject_id = self.state.select_subject_id
             self.props.history.push({
                 pathname: '/question_detail',
                 query: item

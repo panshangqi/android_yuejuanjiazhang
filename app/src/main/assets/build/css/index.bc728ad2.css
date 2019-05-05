@@ -315,12 +315,12 @@ body {
   bottom: 10px;
 }
 .personal_center_html .content .user_info_panel .user_name {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   color: #111;
 }
 .personal_center_html .content .user_info_panel .stu_name {
   margin-top: 10px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #666;
 }
 .personal_center_html .content .function_panel {

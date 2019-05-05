@@ -9,7 +9,10 @@ class QueDetail extends Component {
         super(props);
         console.log(props)
         this.answerInfo = props.location.query
-        console.log('item:=>')
+        this.state = {
+            query: this.answerInfo
+        }
+        console.log('QueDetail:=>')
         console.log(this.answerInfo)
     }
     componentWillUnmount(){
@@ -55,6 +58,7 @@ class QueDetail extends Component {
                     title="试题详情"
                     history={this.props.history}
                     to_route="/exam_analysis"
+                    to_query={this.state.query}
                 />
                 <div className="que_title">
                     <span className="que_num">{this.dataformat('questionname')}</span>

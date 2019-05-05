@@ -2,76 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ff9a35-d8fe-4df2-9fbe-4439ab2a2f0b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/css/index.87dc0a6a.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/css/vendors.4adc2397.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/index.87dc0a6a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/css/index.2d3ff42f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/index.2d3ff42f.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/assets/build/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/vendors.4adc2397.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/components/Page/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/Page/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/components/qishi.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/qishi.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Login/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/Login/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Login/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/pages/Personal/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Personal/style.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/routes/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/routes/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/button/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/button/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/checkbox/checkbox.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/checkbox/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/checkbox/option.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/checkbox/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/icon/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/input/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/input/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/modal/action-button.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/modal/confirm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/modal/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/modal/modal.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/modal/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/pagination/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/pagination/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/radio/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/radio/option.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/radio/radio.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/radio/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/select/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/fade.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/move.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/other.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/slide.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/swing.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/core/motion/zoom.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/mixins/motion.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/style/vars.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/table/column.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/table/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/table/style.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/table/util.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/yq_design/tooltip/index.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -96,30 +40,30 @@
         <counts>
           <entry key="js" value="2" />
           <entry key="json" value="1" />
-          <entry key="jsx" value="8" />
-          <entry key="less" value="2" />
+          <entry key="jsx" value="14" />
+          <entry key="less" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JSX Harmony" value="8" />
+          <entry key="JSX Harmony" value="14" />
           <entry key="JavaScript" value="2" />
-          <entry key="Less" value="2" />
+          <entry key="Less" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="1" />
-          <entry key="jsx" value="512" />
-          <entry key="less" value="63" />
+          <entry key="jsx" value="1478" />
+          <entry key="less" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="JSX Harmony" value="512" />
-          <entry key="Less" value="63" />
+          <entry key="JSX Harmony" value="1478" />
+          <entry key="Less" value="72" />
         </counts>
       </usages-collector>
     </session>
@@ -130,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/assets/src/components/qishi.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="34" />
+              <caret line="7" column="106" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="106" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -139,10 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/index.jsx">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="368">
+              <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#1#42#0" expanded="true" />
               </folding>
@@ -151,76 +95,76 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+            <state relative-caret-position="377">
+              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack_config/webpack.dev.config.js">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/Home/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="19" column="10" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="10" />
+            <state relative-caret-position="646">
+              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack_config/webpack.base.config.js">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1137">
-              <caret line="65" column="31" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="31" />
+            <state relative-caret-position="456">
+              <caret line="171" column="59" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="45" column="17" selection-start-line="43" selection-start-column="15" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="377">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/src/routes/index.less">
+        <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="771">
+              <caret line="84" column="41" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/components/Page/index.jsx">
+        <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" column="112" selection-start-line="13" selection-start-column="112" selection-end-line="13" selection-end-column="112" />
+            <state relative-caret-position="475">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/pages/Login/index.jsx">
+        <entry file="file://$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
-              <caret line="76" column="45" lean-forward="true" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-399">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding>
                 <element signature="e#1#42#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/pages/Login/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -229,7 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TitleBar</find>
       <find>xxxxxxxx</find>
       <find>devel</find>
       <find>get_cookies</find>
@@ -255,15 +198,20 @@
       <find>url-loader</find>
       <find>banyuanbg</find>
       <find>Apple-HeiTi</find>
+      <find>panel_left</find>
+      <find>10001</find>
+      <find>detail</find>
+      <find>student_paper_image</find>
+      <find>nav_box</find>
     </findStrings>
     <dirStrings>
       <dir>D:\AndroidStudioProject\android_yuejuanjiazhang\web\assets</dir>
       <dir>D:\AndroidStudioProject\android_yuejuanjiazhang\web\webpack_config</dir>
       <dir>D:\AndroidStudioProject\android_yuejuanjiazhang\web\assets\src</dir>
       <dir>D:\AndroidStudioProject\android_yuejuanjiazhang\web\assets\src\pages</dir>
-      <dir>D:\AnroidStdioProject\yuejuanjiazhang\web\assets\src</dir>
       <dir>D:\AnroidStdioProject\yuejuanjiazhang\web\webpack_configurl-loader</dir>
       <dir>D:\AnroidStdioProject\yuejuanjiazhang\web\assets\src\pages</dir>
+      <dir>D:\AnroidStdioProject\yuejuanjiazhang\web\assets\src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -274,36 +222,36 @@
       <list>
         <option value="$PROJECT_DIR$/webpack_config/webpack.dev.config.js" />
         <option value="$PROJECT_DIR$/assets/src/pages/GeneralQuestion/style.less" />
-        <option value="$PROJECT_DIR$/assets/src/pages/Personal/style.less" />
         <option value="$PROJECT_DIR$/assets/src/pages/Home/style.less" />
         <option value="$PROJECT_DIR$/assets/src/pages/ResultReport/style.less" />
         <option value="$PROJECT_DIR$/assets/src/pages/ModifyPassword/style.less" />
         <option value="$PROJECT_DIR$/assets/src/components/PageHeader/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/pages/GeneralQuestion/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/routes/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/components/TitleBar/style.less" />
-        <option value="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/pages/QuestionDetail/style.less" />
-        <option value="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" />
         <option value="$PROJECT_DIR$/assets/src/components/MenuNav/style.less" />
         <option value="$PROJECT_DIR$/assets/src/components/PageFooter/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/components/qishi.jsx" />
         <option value="$PROJECT_DIR$/assets/src/pages/ModifyPassword/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/pages/ServicePhone/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/components/Page/style.less" />
         <option value="$PROJECT_DIR$/assets/src/templates/index.html" />
         <option value="$PROJECT_DIR$/assets/src/pages/ServicePhone/style.less" />
         <option value="$PROJECT_DIR$/assets/src/pages/Login/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" />
-        <option value="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" />
         <option value="$PROJECT_DIR$/assets/src/components/Page/index.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/assets/src/pages/Login/style.less" />
         <option value="$PROJECT_DIR$/assets/src/routes/index.less" />
+        <option value="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/Personal/style.less" />
+        <option value="$PROJECT_DIR$/assets/src/components/qishi.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" />
+        <option value="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" />
+        <option value="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" />
       </list>
     </option>
   </component>
@@ -556,12 +504,12 @@
       <workItem from="1556700432460" duration="30255000" />
       <workItem from="1556807699237" duration="66462000" />
       <workItem from="1557024157010" duration="491000" />
-      <workItem from="1557024715323" duration="7406000" />
+      <workItem from="1557024715323" duration="14714000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104614000" />
+    <option name="totallyTimeSpent" value="111922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2007" y="23" width="1708" height="1091" extended-state="0" />
@@ -648,13 +596,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/components/PageContent/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -676,41 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/pages/QuestionDetail/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="e#1#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -787,37 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/Home/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="78" column="62" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="e#1#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="45" column="17" selection-start-line="43" selection-start-column="15" selection-end-line="45" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/components/Page/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -863,30 +742,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/components/qishi.jsx">
+    <entry file="file://$PROJECT_DIR$/assets/src/routes/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="130">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="380">
+          <caret line="74" column="81" selection-start-line="74" selection-start-column="81" selection-end-line="74" selection-end-column="81" />
           <folding>
             <element signature="e#1#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/routes/index.less">
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="377">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/components/qishi.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="106" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/Home/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#1#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#1#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="171" column="59" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="84" column="41" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
         </state>
       </provider>
     </entry>

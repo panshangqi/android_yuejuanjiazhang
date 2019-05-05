@@ -13,9 +13,28 @@ class PersonalCenter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            maxwindow: false
+            stu_name: '-/-',
+            school_name: '-/-'
         }
         console.log(qishi.config.window_width)
+    }
+    componentDidMount(){
+        var token = qishi.cookies.get_token();
+        var userid = qishi.cookies.get_userid();
+        console.log(token, userid)
+        var self = this;
+        qishi.http.get('Getstudentinfo',[userid, token],function (data) {
+            console.log('Getstudentinfo')
+            console.log(data)
+            if(data.codeid == qishi.config.responseOK){
+                self.setState({
+                    stu_name: data.message[0].username,
+                    school_name: data.message[0].stuschool
+                })
+            }else{
+                qishi.util.alert(data.message)
+            }
+        })
     }
     componentWillUnmount(){
 
@@ -53,8 +72,8 @@ class PersonalCenter extends Component {
                          }}
                     >
                         <div className="panel_left">
-                            <div className={'user_name'}>张大大的家长</div>
-                            <div className={'stu_name'}>张大大</div>
+                            <div className={'user_name'}>{this.state.stu_name}的家长</div>
+                            <div className={'stu_name'}>学校：{this.state.school_name}</div>
                         </div>
                         <div className="panel_right">
                             <div className="ele1"></div>

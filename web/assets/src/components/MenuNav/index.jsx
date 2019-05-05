@@ -37,13 +37,11 @@ class MenuNav extends Component {
             // });
         }
         var self = this
+
         $('#nav_box').on('click','li',function () {
             var id = $(this).attr('id')
             var name = $(this).attr('name')
-
-            // self.setState({
-            //     select_id: id
-            // })
+            console.log("scrollLeft:", $('#nav_box').scrollLeft())
             if(typeof self.ItemClick === 'function'){
                 self.ItemClick({
                     id, name
@@ -68,8 +66,23 @@ class MenuNav extends Component {
             }
         }
         if(update){
+            var pos = 0;
+            for(var data of props.dataList){
+                if(data.id == props.SelectID){
+                    pos++
+                    break;
+                }
+            }
             this.setState({
                 nav_list: props.DataList
+            },function () {
+                //计算被选择的位置
+                var licount = $('#nav_box li').length;
+                // var leftWidth = 0;
+                // for(var i=0;i<pos;i++){
+                //     leftWidth += $('#nav_box').find('li').eq(i).width()
+                // }
+                // console.log(leftWidth)
             })
         }
 
