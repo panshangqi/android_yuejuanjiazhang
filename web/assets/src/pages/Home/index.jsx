@@ -49,7 +49,7 @@ class Home extends Component {
                 })
 
             }else{
-
+                qishi.util.alert(data.message)
             }
         })
     }
@@ -76,9 +76,6 @@ class Home extends Component {
             <div className="home_html">
                 <TitleBar
                     title="首 页"
-                    backgroundColor={qishi.config.theme_color}
-                    history={this.props.history}
-                    to_route="/personal"
                     back_ico={false}
                 />
                 <div className="content">

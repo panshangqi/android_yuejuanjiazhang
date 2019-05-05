@@ -1,18 +1,26 @@
 package com.app.yuejuanjiazhang;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.lang.reflect.InvocationTargetException;
@@ -22,12 +30,35 @@ public class MainActivity extends AppCompatActivity {
     WebView webView;
     WebSettings webSettings;
     WebViewClient webViewClient;
+    LinearLayout statusBar;
     Button f5Btn;
     boolean isLoadUrl  = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        statusBar = (LinearLayout) findViewById(R.id.status_bar);
+        if (Build.VERSION.SDK_INT >= 21) {
+            statusBar.setVisibility(View.GONE);
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //设置修改状态栏
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            //设置状态栏的颜色，和你的app主题或者标题栏颜色设置一致就ok了
+            window.setStatusBarColor(getResources().getColor(R.color.theme_color));
+
+        }else{
+            statusBar.setVisibility(View.VISIBLE);
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+            int statusBarHeight = getStatusBarHeight(window.getContext());
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight);
+            statusBar.setLayoutParams(params);
+            statusBar.setBackgroundColor(getResources().getColor(R.color.theme_color));
+
+        }
 
         webView = (WebView) findViewById(R.id.webView);
         f5Btn = (Button)findViewById(R.id.f5_btn);
@@ -122,6 +153,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return super.onKeyDown(keyCode, event);
+    }
+    private static int getStatusBarHeight(Context context) {
+        int statusBarHeight = 0;
+        Resources res = context.getResources();
+        int resourceId = res.getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            statusBarHeight = res.getDimensionPixelSize(resourceId);
+        }
+        return statusBarHeight;
     }
 
 }

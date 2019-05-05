@@ -9,7 +9,10 @@ class QueDetail extends Component {
         super(props);
         console.log(props)
         this.answerInfo = props.location.query
-        console.log('item:=>')
+        this.state = {
+            query: this.answerInfo
+        }
+        console.log('QueDetail:=>')
         console.log(this.answerInfo)
     }
     componentWillUnmount(){
@@ -53,8 +56,12 @@ class QueDetail extends Component {
 
                 <TitleBar
                     title="试题详情"
-                    history={this.props.history}
-                    to_route="/exam_analysis"
+                    BackClick={(function(){
+                        this.props.history.push({
+                            pathname: "/exam_analysis",
+                            query: this.state.query
+                        })
+                    }).bind(this)}
                 />
                 <div className="que_title">
                     <span className="que_num">{this.dataformat('questionname')}</span>

@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-
 import qishi from '@components/qishi.jsx';
 import $ from 'jquery'
 import './style.less'
@@ -8,25 +7,47 @@ import './style.less'
 class MenuNav extends Component {
     constructor(props) {
         super(props);
-        var navlist = props.DataList ? props.DataList : []
-        var selectid = null
-        if(navlist.length>0){
-            selectid = navlist[0].id
-        }
         this.state = {
-            select_id: selectid,
-            nav_list: navlist
+            subject_id: props.subject_id,
+            exam_id: props.exam_id,
+            subject_list: []
         }
+        console.log('MenuNav', this.state)
         this.ItemClick = props.ItemClick
-        /*
-        nav_list = [{
-            name: name,
-            id: id
-        }]
-         */
-
     }
     componentDidMount(){
+        //考试科目列表
+        var token = qishi.cookies.get_token();
+        var userid = qishi.cookies.get_userid();
+        console.log('MenuNav token = ' +token, userid, this.state.exam_id)
+        var self = this
+        qishi.http.get('GetOneTestscore',[userid, token, this.state.exam_id],function (data) {
+            console.log('GetOneTestscore')
+            console.log(data)
+            if (data.codeid == qishi.config.responseOK) {
+
+                var sublist = data.message[0].paperscore
+                if(self.state.subject_id){
+                    self.setState({
+                        subject_list: sublist
+                    })
+                }else{
+                    self.setState({
+                        subject_id: sublist.length > 0 ? sublist[0].subjectid: null,
+                        subject_list: sublist
+                    })
+                }
+
+                if(typeof self.ItemClick === 'function'){
+                    self.ItemClick({
+                        id: self.state.subject_id
+                    })
+                }
+
+            } else {
+                qishi.util.alert(data.message)
+            }
+        })
         var u = navigator.userAgent;
         var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
         if(isAndroid){		/*注释5*/
@@ -40,45 +61,25 @@ class MenuNav extends Component {
             // });
         }
         var self = this
+
         $('#nav_box').on('click','li',function () {
             var id = $(this).attr('id')
-            var name = $(this).attr('name')
-
             self.setState({
-                select_id: id
+                subject_id: id
             })
             if(typeof self.ItemClick === 'function'){
                 self.ItemClick({
-                    id, name
+                    id
                 })
             }
         })
     }
     componentWillReceiveProps(props){
-        console.log("componentWillReceiveProps",this.state.nav_list, props.DataList)
-        var update = false
-        if(this.state.nav_list.length != props.DataList.length){
-            update = true;
-        }else{
-            for(var i=0;i<props.DataList.length;i++){
-                if(props.DataList[i].id != this.state.nav_list[i].id){
-                    update = true;
-                    break;
-                }
-            }
-        }
-        if(update){
-            var navlist = props.DataList ? props.DataList : []
-            var selectid = null
-            if(navlist.length>0){
-                selectid = navlist[0].id
-            }
-            this.setState({
-                select_id: selectid,
-                nav_list: props.DataList
-            })
-        }
 
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+
+        return true;
     }
     componentWillUnmount(){
 
@@ -87,37 +88,64 @@ class MenuNav extends Component {
         };
     }
     renderItemLi(){
-        console.log('>>>>>>>>>>>>>')
-        console.log( this.state.nav_list)
         var arr = []
         var keyid = 0;
-        for(var item of this.state.nav_list){
+        console.log('xxxxxxxxxxxxxxxx>>>>>>>>',this.state.subject_list)
+        /*
+        5 102
+        4 87
+        3 73
+        2 58
+        1 43
+        0 28
+         */
+
+        // if(this.state.subject_list.length > 0){
+        //     var leftw = 0;
+        //     var leftww = 0
+        //     for(var i=0;i<this.state.subject_list.length;i++){
+        //         var item = this.state.subject_list[i];
+        //         var vals = (item.subjectname.length)*16 + 28
+        //         leftww += vals
+        //         if(this.state.subject_id == item.subjectid)
+        //             break;
+        //         leftw += vals
+        //     }
+        //     console.log('left>',leftw)
+        //     if(leftww < $(window).width()){
+        //         $('#nav_box').scrollLeft(0);
+        //     }else{
+        //         $('#nav_box').scrollLeft(leftw);
+        //     }
+        //
+        //     //this.initPos = false
+        // }
+
+        for(var item of this.state.subject_list){
             arr.push(
                 <li
-                    id={item.id}
-                    name={item.name}
+                    id={item.subjectid}
+                    name={item.subjectname}
                     key={'navli_'+keyid}
                     style={{
-                        color: this.state.select_id == item.id ? qishi.config.theme_color: '#444',
-                        fontSize: this.state.select_id == item.id ? '1.0rem': '0.9rem'
+                        color: this.state.subject_id == item.subjectid ? qishi.config.theme_color: '#444',
+                        fontSize: this.state.subject_id == item.subjectid ? '1.0rem': '0.9rem'
                     }}
                 >
-                    {item.name}
+                    {item.subjectname}
                 </li>
             )
             keyid++
+
         }
         return arr;
     }
     render() {
         return (
             <div className="menu_nav_html">
-                    <ul className="nav_box" id="nav_box">
-                        {
-                            this.renderItemLi()
-                        }
-                    </ul>
-
+                <ul className="nav_box" id="nav_box">
+                    {this.renderItemLi()}
+                </ul>
             </div>
         );
     }

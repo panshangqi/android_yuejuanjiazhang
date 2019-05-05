@@ -14,71 +14,40 @@ for(var i=0;i<1000;i++)
 class ExamAnalysis extends Component {
     constructor(props) {
         super(props);
+        console.log('ExamAnalysis')
         console.log(props)
+        var tableListHeight = $(window).height() - 45 - 40 - 35*2;
+        var imageListHeight = tableListHeight * 0.33;
+        tableListHeight = tableListHeight * 0.66;
         this.state = {
-            subject_list: [],
             question_list: [],
             paper_img_list: [],
-            exam_id: props.location.query ? props.location.query.exam_id : '10001',
-            select_subject_id: null,
-            tableListHeight: 0,
-            tableListWidth: 0,
-            imageListHeight:0
+            exam_id: props.location.query ? props.location.query.exam_id: '',
+            select_subject_id: props.location.query ? props.location.query.subject_id : '',
+            tableListHeight: tableListHeight,
+            tableListWidth: $(window).width(),
+            imageListHeight: imageListHeight
         }
+        console.log(this.state)
         this.navItemClick = this.navItemClick.bind(this)
     }
     componentDidMount(){
-        //考试科目列表
-
-        var token = qishi.cookies.get_token();
-        var userid = qishi.cookies.get_userid();
-        console.log('token = ' +token, userid, this.state.exam_id)
         var self = this
-        qishi.http.get('GetOneTestscore',[userid, token, this.state.exam_id],function (data) {
-            console.log('GetOneTestscore')
-            console.log(data)
-            if(data.codeid == qishi.config.responseOK){
-                if(data.message.length>0){
-                    var exam_info = data.message[0]
-                    var templist = exam_info.paperscore
-                    // templist = templist.concat(templist)
-                    // templist = templist.concat(templist)
-                    // templist = templist.concat(templist)
-                    for(var item of templist){
-                        item.id = item.subjectid
-                        item.name = item.subjectname
-                    }
-                    self.setState({
-                        subject_list: templist
-                    })
-                    if(templist.length>0){
-                        var selectSubjectID = templist[0].subjectid
-                        self.setState({
-                            select_subject_id: selectSubjectID
-                        })
-                        self.getSubjectQuesScore(selectSubjectID)
-                    }
-                }
-
-            }else{
-                qishi.util.alert(data.message)
-            }
-        })
-
-        var tableListHeight = $(window).height() - $('#wrap_info').outerHeight() - 2*($('#sub_title').outerHeight());
-        console.log('tableListHeight: ' + tableListHeight,$(window).height());
-        var imageListHeight = tableListHeight * 0.33;
-        tableListHeight = tableListHeight * 0.66;
-        this.setState({
-            tableListWidth: $(window).width(),
-            tableListHeight: tableListHeight,
-            imageListHeight: imageListHeight
-        })
+        // var tableListHeight = $(window).height() - $('#wrap_info').outerHeight() - 2*($('#sub_title').outerHeight());
+        // console.log('tableListHeight: ' + tableListHeight,$(window).height());
+        // var imageListHeight = tableListHeight * 0.33;
+        // tableListHeight = tableListHeight * 0.66;
+        // this.setState({
+        //     tableListWidth: $(window).width(),
+        //     tableListHeight: tableListHeight,
+        //     imageListHeight: imageListHeight
+        // })
 
         $('#question_list').on('click','.que_row',function () {
             var index = $(this).attr('index')
             var item  = self.state.question_list[index]
-            console.log(item)
+            item.exam_id = self.state.exam_id
+            item.subject_id = self.state.select_subject_id
             self.props.history.push({
                 pathname: '/question_detail',
                 query: item
@@ -90,6 +59,10 @@ class ExamAnalysis extends Component {
         this.setState = (state,callback)=>{
             return;
         };
+    }
+    navItemClick(item){
+        console.log(item)
+        this.getSubjectQuesScore(item.id)
     }
     getSubjectQuesScore(subjectid){
         var token = qishi.cookies.get_token();
@@ -105,6 +78,7 @@ class ExamAnalysis extends Component {
                     questionList['key_id'] = 'que_' + i;
                 }
                 self.setState({
+                    select_subject_id: subjectid,
                     question_list: questionList,
                     paper_img_list: data.message[0].paperimage.split(',')
                 })
@@ -113,26 +87,12 @@ class ExamAnalysis extends Component {
             }
         })
     }
-    renderSubjectList(){
-        var arr = []
-        var keyid = 0;
-        for(var sub of this.state.subject_list){
-            arr.push(<li
-                sub_id={sub.subjectid}
-                key={'subid_'+keyid}
-                style={{color: sub.subjectid == this.state.select_subject_id? qishi.config.theme_color: '#333'}}
-            >
-                {sub.subjectname}
-            </li>)
-            keyid++
-        }
-        return arr;
-    }
+
     renderStudentPaper(){
         var arr = []
         var keyid = 0;
         for(var img of this.state.paper_img_list){
-            console.log(qishi.util.make_image_url(img), img);
+
             arr.push(
                 <img
                     src={qishi.util.make_image_url(img)}
@@ -143,15 +103,7 @@ class ExamAnalysis extends Component {
         }
         return arr;
     }
-    navItemClick(item){
-        console.log(item)
-        var selectSubjectID = item.id
-        console.log(selectSubjectID)
-        this.setState({
-            select_subject_id: selectSubjectID
-        })
-        this.getSubjectQuesScore(selectSubjectID)
-    }
+
     render() {
         var self = this
         return (
@@ -160,13 +112,13 @@ class ExamAnalysis extends Component {
                 <div id="wrap_info" style={{height: 'auto'}}>
                     <TitleBar
                         title="试题分析"
-                        backgroundColor={qishi.config.theme_color}
-                        history={this.props.history}
-                        to_route="/home"
-                        id="title_bar"
+                        BackClick={(function(){
+                            this.props.history.push("/home")
+                        }).bind(this)}
                     />
                     <MenuNav
-                        DataList = {this.state.subject_list}
+                        exam_id = {this.state.exam_id}
+                        subject_id = {this.state.select_subject_id}
                         ItemClick = {this.navItemClick}
                     />
                 </div>

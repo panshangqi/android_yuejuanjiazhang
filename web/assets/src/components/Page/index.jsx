@@ -11,7 +11,7 @@ class Header extends Component {
     render() {
         return (
             <div className="page_base_html">
-                <div className="environment">
+                <div className="environment" style={{display: qishi.config.ENV == 'development' ? 'block': 'none'}}>
                     {qishi.config.ENV}
                 </div>
                 <div>

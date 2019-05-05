@@ -15,7 +15,7 @@ class Login extends Component {
         this.state = {
             username: userid ? userid : "",
             password: "0",
-            ip: ip ? ip: ""
+            ip: ip ? ip: "49.4.48.115"
         };
 
     }
