@@ -1,6 +1,7 @@
 package com.app.yuejuanjiazhang;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout statusBar;
     Button f5Btn;
     boolean isLoadUrl  = false;
+    private long time =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,14 +145,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            if (webView.canGoBack()) {
-                webView.goBack();
-                return true;
-            } else {
-                Log.v("YJ","KEYCODE_BACK finish");
-                finish();
-                return true;
+//            if (webView.canGoBack()) {
+//                //webView.goBack();
+//                //finish();
+//
+//            } else {
+//                Log.v("YJ","KEYCODE_BACK finish");
+//                finish();
+//                return true;
+//            }
+            if ((System.currentTimeMillis() - time > 1000)) {
+                Toast.makeText(this, "再按一次返回桌面", Toast.LENGTH_SHORT).show();
+                time = System.currentTimeMillis();
+            }else{
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.MAIN");
+                intent.addCategory("android.intent.category.HOME");
+                startActivity(intent);
             }
+
+            return true;
         }
         return super.onKeyDown(keyCode, event);
     }
