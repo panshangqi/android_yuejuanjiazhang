@@ -4,6 +4,7 @@ import qishi from '@components/qishi.jsx';
 import TitleBar from '@components/TitleBar'
 import banyuanbg from '@imgs/banyuanbg.png'
 import pen_001 from '@imgs/pen_001.png'
+import $ from 'jquery'
 import './style.less'
 
 class ResultReport extends Component {
@@ -41,6 +42,18 @@ class ResultReport extends Component {
             }
         })
 
+        $('#subjectlist_body').on('click','.item',function () {
+            var subid = $(this).attr('subid')
+            console.log(subid)
+            self.props.history.push({
+                pathname: '/exam_analysis',
+                query:{
+                    subject_id: subid,
+                    exam_id: self.state.exam_id
+                }
+            })
+        })
+
     }
     renderSubjectList(){
         var arr = []
@@ -49,13 +62,13 @@ class ResultReport extends Component {
             var item2 = this.state.subject_list[i+1]
             arr.push(
                 <tr  key={'tr'+i}>
-                    <td key={i+'a'}>
+                    <td key={i+'a'} subid={item1.subjectid} className="item">
                         <div className="sub_name">{item1.subjectname}</div>
                         <div className="sub_score"><span>{item1.stuscore}</span>/{item1.fullscore}分</div>
                     </td>
                     {
                         i+1 < this.state.subject_list.length ? (
-                            <td key={i+'b'}>
+                            <td key={i+'b'} subid={item2.subjectid}  className="item">
                                 <div className="sub_name">{item2.subjectname}</div>
                                 <div className="sub_score"><span>{item2.stuscore}</span>/{item2.fullscore}分</div>
                             </td>
@@ -111,7 +124,7 @@ class ResultReport extends Component {
                             </tr></tbody>
                         </table>
                         <table className="table_subject_list">
-                            <tbody>
+                            <tbody id="subjectlist_body">
                             {this.renderSubjectList()}
                             </tbody>
                         </table>

@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
         if(Public.ENV.equals("development")){
-            webView.loadUrl("http://192.168.2.56:10032/templates/index.html#/menu_nav");
+            webView.loadUrl("http://10.200.6.66:10032/templates/index.html#/menu_nav");
             //webView.loadUrl("http://www.baidu.com");
         }else{
             f5Btn.setVisibility(View.GONE);

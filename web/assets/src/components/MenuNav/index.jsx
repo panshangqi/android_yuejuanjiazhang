@@ -9,10 +9,7 @@ class MenuNav extends Component {
     constructor(props) {
         super(props);
         var navlist = props.DataList ? props.DataList : []
-        var selectid = null
-        if(navlist.length>0){
-            selectid = navlist[0].id
-        }
+        var selectid = props.SelectID ? props.SelectID: null
         this.state = {
             select_id: selectid,
             nav_list: navlist
@@ -44,9 +41,9 @@ class MenuNav extends Component {
             var id = $(this).attr('id')
             var name = $(this).attr('name')
 
-            self.setState({
-                select_id: id
-            })
+            // self.setState({
+            //     select_id: id
+            // })
             if(typeof self.ItemClick === 'function'){
                 self.ItemClick({
                     id, name
@@ -56,6 +53,9 @@ class MenuNav extends Component {
     }
     componentWillReceiveProps(props){
         console.log("componentWillReceiveProps",this.state.nav_list, props.DataList)
+        this.setState({
+            select_id: props.SelectID ? props.SelectID: null
+        })
         var update = false
         if(this.state.nav_list.length != props.DataList.length){
             update = true;
@@ -68,13 +68,7 @@ class MenuNav extends Component {
             }
         }
         if(update){
-            var navlist = props.DataList ? props.DataList : []
-            var selectid = null
-            if(navlist.length>0){
-                selectid = navlist[0].id
-            }
             this.setState({
-                select_id: selectid,
                 nav_list: props.DataList
             })
         }

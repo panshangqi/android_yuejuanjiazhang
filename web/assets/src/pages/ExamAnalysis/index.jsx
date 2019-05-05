@@ -14,13 +14,15 @@ for(var i=0;i<1000;i++)
 class ExamAnalysis extends Component {
     constructor(props) {
         super(props);
+        console.log('ExamAnalysis')
         console.log(props)
+        var _subjectid = props.location.query ? props.location.query.subject_id : null
         this.state = {
             subject_list: [],
             question_list: [],
             paper_img_list: [],
             exam_id: props.location.query ? props.location.query.exam_id : '10001',
-            select_subject_id: null,
+            select_subject_id: _subjectid,
             tableListHeight: 0,
             tableListWidth: 0,
             imageListHeight:0
@@ -51,13 +53,17 @@ class ExamAnalysis extends Component {
                     self.setState({
                         subject_list: templist
                     })
-                    if(templist.length>0){
-                        var selectSubjectID = templist[0].subjectid
-                        self.setState({
-                            select_subject_id: selectSubjectID
-                        })
-                        self.getSubjectQuesScore(selectSubjectID)
+                    if(self.state.select_subject_id){
+                        self.getSubjectQuesScore(self.state.select_subject_id)
+                    }else{
+                        if(templist.length>0){
+                            self.setState({
+                                select_subject_id: templist[0].subjectid
+                            })
+                            self.getSubjectQuesScore(templist[0].subjectid)
+                        }
                     }
+
                 }
 
             }else{
@@ -113,21 +119,7 @@ class ExamAnalysis extends Component {
             }
         })
     }
-    renderSubjectList(){
-        var arr = []
-        var keyid = 0;
-        for(var sub of this.state.subject_list){
-            arr.push(<li
-                sub_id={sub.subjectid}
-                key={'subid_'+keyid}
-                style={{color: sub.subjectid == this.state.select_subject_id? qishi.config.theme_color: '#333'}}
-            >
-                {sub.subjectname}
-            </li>)
-            keyid++
-        }
-        return arr;
-    }
+
     renderStudentPaper(){
         var arr = []
         var keyid = 0;
@@ -167,6 +159,7 @@ class ExamAnalysis extends Component {
                     />
                     <MenuNav
                         DataList = {this.state.subject_list}
+                        SelectID = {this.state.select_subject_id}
                         ItemClick = {this.navItemClick}
                     />
                 </div>
