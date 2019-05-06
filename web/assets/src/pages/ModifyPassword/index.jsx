@@ -64,8 +64,9 @@ class ModifyPassword extends Component {
                 <div className="content">
                     <TitleBar
                         title="修改密码"
-                        history={this.props.history}
-                        to_route="/personal"
+                        BackClick={(function(){
+                            this.props.history.push("/personal")
+                        }).bind(this)}
                     />
                     <div className="op_panpel">
                         <div className="subtitle">原密码</div>

@@ -21,9 +21,9 @@ class ServicePhone extends Component {
             <div className="service_phone_html">
                 <TitleBar
                     title="客服电话"
-                    backgroundColor={qishi.config.theme_color}
-                    history={this.props.history}
-                    to_route="/personal"
+                    BackClick={(function(){
+                        this.props.history.push("/personal")
+                    }).bind(this)}
                 />
                 <div className="bg_box">
                     <img src={servicelogo} style={{width: '40%'}}/>

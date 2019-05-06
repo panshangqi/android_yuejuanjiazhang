@@ -96,9 +96,9 @@ class ResultReport extends Component {
             <div className="result_report_html">
                 <TitleBar
                     title="成绩报告"
-                    backgroundColor={qishi.config.theme_color}
-                    history={this.props.history}
-                    to_route="/home"
+                    BackClick={(function(){
+                        this.props.history.push("/home")
+                    }).bind(this)}
                 />
                 <img src={banyuanbg} className="banyuan_bg"/>
                 <div className="content">

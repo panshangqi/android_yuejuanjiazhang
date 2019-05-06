@@ -1,13 +1,18 @@
 package com.app.yuejuanjiazhang;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.SslErrorHandler;
@@ -15,6 +20,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.lang.reflect.InvocationTargetException;
@@ -24,19 +31,35 @@ public class MainActivity extends AppCompatActivity {
     WebView webView;
     WebSettings webSettings;
     WebViewClient webViewClient;
+    LinearLayout statusBar;
     Button f5Btn;
     boolean isLoadUrl  = false;
+    private long time =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        statusBar = (LinearLayout) findViewById(R.id.status_bar);
+        if (Build.VERSION.SDK_INT >= 21) {
+            statusBar.setVisibility(View.GONE);
             Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //设置修改状态栏
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             //设置状态栏的颜色，和你的app主题或者标题栏颜色设置一致就ok了
             window.setStatusBarColor(getResources().getColor(R.color.theme_color));
+
+        }else{
+            statusBar.setVisibility(View.VISIBLE);
+            Window window = getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+            int statusBarHeight = getStatusBarHeight(window.getContext());
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight);
+            statusBar.setLayoutParams(params);
+            statusBar.setBackgroundColor(getResources().getColor(R.color.theme_color));
+
         }
 
         webView = (WebView) findViewById(R.id.webView);
@@ -105,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
         if(Public.ENV.equals("development")){
-            webView.loadUrl("http://10.200.6.66:10032/templates/index.html#/menu_nav");
+            webView.loadUrl("http://192.168.2.56:10032/templates/index.html#/menu_nav");
             //webView.loadUrl("http://www.baidu.com");
         }else{
             f5Btn.setVisibility(View.GONE);
@@ -122,16 +145,37 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            if (webView.canGoBack()) {
-                webView.goBack();
-                return true;
-            } else {
-                Log.v("YJ","KEYCODE_BACK finish");
-                finish();
-                return true;
+//            if (webView.canGoBack()) {
+//                //webView.goBack();
+//                //finish();
+//
+//            } else {
+//                Log.v("YJ","KEYCODE_BACK finish");
+//                finish();
+//                return true;
+//            }
+            if ((System.currentTimeMillis() - time > 1000)) {
+                Toast.makeText(this, "再按一次返回桌面", Toast.LENGTH_SHORT).show();
+                time = System.currentTimeMillis();
+            }else{
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.MAIN");
+                intent.addCategory("android.intent.category.HOME");
+                startActivity(intent);
             }
+
+            return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+    private static int getStatusBarHeight(Context context) {
+        int statusBarHeight = 0;
+        Resources res = context.getResources();
+        int resourceId = res.getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            statusBarHeight = res.getDimensionPixelSize(resourceId);
+        }
+        return statusBarHeight;
     }
 
 }

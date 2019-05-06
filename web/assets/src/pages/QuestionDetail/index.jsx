@@ -56,9 +56,12 @@ class QueDetail extends Component {
 
                 <TitleBar
                     title="试题详情"
-                    history={this.props.history}
-                    to_route="/exam_analysis"
-                    to_query={this.state.query}
+                    BackClick={(function(){
+                        this.props.history.push({
+                            pathname: "/exam_analysis",
+                            query: this.state.query
+                        })
+                    }).bind(this)}
                 />
                 <div className="que_title">
                     <span className="que_num">{this.dataformat('questionname')}</span>

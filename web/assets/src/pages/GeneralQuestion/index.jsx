@@ -19,9 +19,9 @@ class GeneralQuestion extends Component {
             <div className="general_ques_html">
                 <TitleBar
                     title="常见问题"
-                    backgroundColor={qishi.config.theme_color}
-                    history={this.props.history}
-                    to_route="/personal"
+                    BackClick={(function(){
+                        this.props.history.push("/personal")
+                    }).bind(this)}
                 />
             </div>
         );
