@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ff9a35-d8fe-4df2-9fbe-4439ab2a2f0b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/css/index.2d3ff42f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/index.2d3ff42f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/assets/build/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/assets/build/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/TitleBar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/components/qishi.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/components/qishi.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ExamAnalysis/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Personal/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/Personal/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/Personal/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/QuestionDetail/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/pages/ResultReport/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,14 +26,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="js" value="2" />
-          <entry key="json" value="1" />
+          <entry key="json" value="2" />
           <entry key="jsx" value="14" />
           <entry key="less" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="1" />
+          <entry key="JSON" value="2" />
           <entry key="JSX Harmony" value="14" />
           <entry key="JavaScript" value="2" />
           <entry key="Less" value="5" />
@@ -95,15 +82,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/src/pages/Personal/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/pages/Home/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="646">
@@ -130,11 +108,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="84" column="41" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
+            <state relative-caret-position="562">
+              <caret line="76" column="40" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -272,8 +259,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2007" />
-    <option name="y" value="23" />
+    <option name="x" value="1975" />
+    <option name="y" value="5" />
     <option name="width" value="1708" />
     <option name="height" value="1091" />
   </component>
@@ -504,15 +491,15 @@
       <workItem from="1556700432460" duration="30255000" />
       <workItem from="1556807699237" duration="66462000" />
       <workItem from="1557024157010" duration="491000" />
-      <workItem from="1557024715323" duration="14714000" />
+      <workItem from="1557024715323" duration="15373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111922000" />
+    <option name="totallyTimeSpent" value="112581000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2007" y="23" width="1708" height="1091" extended-state="0" />
+    <frame x="1975" y="5" width="1708" height="1091" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" order="0" side_tool="true" />
@@ -718,13 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/pages/Login/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -833,8 +813,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/components/MenuNav/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="84" column="41" lean-forward="true" selection-start-line="80" selection-start-column="19" selection-end-line="84" selection-end-column="41" />
+        <state relative-caret-position="562">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
         </state>
       </provider>
     </entry>
