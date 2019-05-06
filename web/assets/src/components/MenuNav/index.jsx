@@ -90,36 +90,6 @@ class MenuNav extends Component {
     renderItemLi(){
         var arr = []
         var keyid = 0;
-        console.log('xxxxxxxxxxxxxxxx>>>>>>>>',this.state.subject_list)
-        /*
-        5 102
-        4 87
-        3 73
-        2 58
-        1 43
-        0 28
-         */
-
-        // if(this.state.subject_list.length > 0){
-        //     var leftw = 0;
-        //     var leftww = 0
-        //     for(var i=0;i<this.state.subject_list.length;i++){
-        //         var item = this.state.subject_list[i];
-        //         var vals = (item.subjectname.length)*16 + 28
-        //         leftww += vals
-        //         if(this.state.subject_id == item.subjectid)
-        //             break;
-        //         leftw += vals
-        //     }
-        //     console.log('left>',leftw)
-        //     if(leftww < $(window).width()){
-        //         $('#nav_box').scrollLeft(0);
-        //     }else{
-        //         $('#nav_box').scrollLeft(leftw);
-        //     }
-        //
-        //     //this.initPos = false
-        // }
 
         for(var item of this.state.subject_list){
             arr.push(

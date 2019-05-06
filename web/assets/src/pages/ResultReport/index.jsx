@@ -112,10 +112,10 @@ class ResultReport extends Component {
                                 <td style={{width: '25%',verticalAlign:'bottom'}}>
                                     <img src={pen_001} style={{width: '3.3rem'}}/>
                                 </td>
-                                <td style={{width: '45%',fontSize: '1.3rem',verticalAlign:'top'}} className="theme_color">
+                                <td style={{width: '40%',fontSize: '1.3rem',verticalAlign:'top'}} className="theme_color">
                                     总成绩
                                 </td>
-                                <td style={{width: '30%', textAlign:'left', verticalAlign:'bottom'}}>
+                                <td style={{width: '35%', textAlign:'left', verticalAlign:'bottom'}}>
                                     <span>
                                         <div>
                                             <span className="theme_color"> 年级：{this.state.grade_rank}名</span>

@@ -11,6 +11,7 @@ class Login extends Component {
         var userid = qishi.cookies.get_cookies('yuejuan_userid')
         var ip = qishi.cookies.get_cookies('yuejuan_ip')
         console.log('init')
+        qishi.util.log('userid='+userid+',ip='+ip)
         console.log(userid, ip)
         this.state = {
             username: userid ? userid : "",

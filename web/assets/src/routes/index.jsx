@@ -43,7 +43,6 @@ ReactDOM.render(
                 <Route exact path="/exam_analysis" component={ExamAnalysis}/>
                 <Route exact path="/result_report" component={ResultReport}/>
                 <Route exact path="/home" component={Home}/>
-                <Route exact path="/question_detail" component={QuestionDetail}/>
                 <Route component={Login} />
             </Switch>
         </Page>

@@ -31,17 +31,20 @@ public class MainActivity extends AppCompatActivity {
     WebView webView;
     WebSettings webSettings;
     WebViewClient webViewClient;
-    LinearLayout statusBar;
     Button f5Btn;
     boolean isLoadUrl  = false;
     private long time =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
-        statusBar = (LinearLayout) findViewById(R.id.status_bar);
+        /*
+        Android 4.4 SDK19之前，Android 的状态栏是黑色背景，无法修改。
+        Android 4.4 推出了透明状态栏的效果。
+        Android 5.0  SDK21提供了方法可以直接修改状态栏的颜色。
+         */
         if (Build.VERSION.SDK_INT >= 21) {
-            statusBar.setVisibility(View.GONE);
             Window window = getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             //设置修改状态栏
@@ -50,16 +53,8 @@ public class MainActivity extends AppCompatActivity {
             window.setStatusBarColor(getResources().getColor(R.color.theme_color));
 
         }else{
-            statusBar.setVisibility(View.VISIBLE);
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-            int statusBarHeight = getStatusBarHeight(window.getContext());
-
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, statusBarHeight);
-            statusBar.setLayoutParams(params);
-            statusBar.setBackgroundColor(getResources().getColor(R.color.theme_color));
-
+            //全屏
+            getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN , WindowManager.LayoutParams. FLAG_FULLSCREEN);
         }
 
         webView = (WebView) findViewById(R.id.webView);
@@ -77,16 +72,14 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAllowFileAccess(true);
         webSettings.setAppCacheEnabled(true);
         String appCachePath = getApplication().getCacheDir().getAbsolutePath();
+        String appDatabasePath = getPrePath(appCachePath) + "/app_database";
         Log.v("YJX appCachePath",appCachePath);
+        Log.v("YJX appDatabasePath",appDatabasePath);
         webSettings.setAppCachePath(appCachePath);
         webSettings.setDatabaseEnabled(true);
+        webSettings.setDatabasePath(appDatabasePath);
 
         Log.v("YJX",String.valueOf(Build.VERSION.SDK_INT));
-        if (Build.VERSION.SDK_INT >= 19){
-            WebView.setWebContentsDebuggingEnabled(true);
-        }
-        Log.v("YJ JELLY_BEAN", String.valueOf(Build.VERSION_CODES.JELLY_BEAN));
-
         if (Build.VERSION.SDK_INT >= 16) {
             webSettings.setAllowUniversalAccessFromFileURLs(true);
             //是否允许file:// 协议下的js跨域加载http或者https的地址。
@@ -128,8 +121,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
         if(Public.ENV.equals("development")){
-            webView.loadUrl("http://192.168.2.56:10032/templates/index.html#/menu_nav");
+            webView.loadUrl("http://10.200.6.66:10032/templates/index.html");
             //webView.loadUrl("http://www.baidu.com");
+            if (Build.VERSION.SDK_INT >= 19){
+                WebView.setWebContentsDebuggingEnabled(true);
+            }
         }else{
             f5Btn.setVisibility(View.GONE);
             webView.loadUrl("file:///android_asset/build/templates/index.html");
@@ -177,5 +173,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return statusBarHeight;
     }
-
+    private String getPrePath(String curPath){
+        int pos = curPath.lastIndexOf('/');
+        return curPath.substring(0, pos);
+    }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import { message } from 'antd'
+import { message, Spin } from 'antd'
 console.log("environment: " + process.env.NODE_ENV)
 const Qishi = {};
 Qishi.config = {
@@ -49,6 +49,11 @@ Qishi.util = {
         })
         message.warning(msg);
     },
+    log:function(msg){
+        if(typeof android != 'undefined'){
+            android.logv(msg)
+        }
+    },
     wsdl_url: function(){
         var ip = Qishi.cookies.get_cookies('yuejuan_ip');
         console.log(ip)
@@ -90,6 +95,7 @@ http://49.4.48.115
         var xmlhttp = new XMLHttpRequest();
         var route = url //such as ParentLogin
         //replace second argument with the path to your Secret Server webservices
+
         try{
             xmlhttp.open('POST', Qishi.util.wsdl_url(), true);
 

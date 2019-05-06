@@ -10,3 +10,4 @@
 /captures
 .externalNativeBuild
 web/node_modules
+web/.idea

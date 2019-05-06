@@ -17,7 +17,7 @@ class ExamAnalysis extends Component {
         console.log('ExamAnalysis')
         console.log(props)
         var tableListHeight = $(window).height() - 45 - 40 - 35*2;
-        var imageListHeight = tableListHeight * 0.33;
+        var imageListHeight = tableListHeight * 0.34;
         tableListHeight = tableListHeight * 0.66;
         this.state = {
             question_list: [],
@@ -26,7 +26,8 @@ class ExamAnalysis extends Component {
             select_subject_id: props.location.query ? props.location.query.subject_id : '',
             tableListHeight: tableListHeight,
             tableListWidth: $(window).width(),
-            imageListHeight: imageListHeight
+            imageListHeight: imageListHeight,
+            answerInfo:{}
         }
         console.log(this.state)
         this.navItemClick = this.navItemClick.bind(this)
@@ -48,9 +49,10 @@ class ExamAnalysis extends Component {
             var item  = self.state.question_list[index]
             item.exam_id = self.state.exam_id
             item.subject_id = self.state.select_subject_id
-            self.props.history.push({
-                pathname: '/question_detail',
-                query: item
+            console.log(item)
+            $('#que_detail_virtual_html').show()
+            self.setState({
+                answerInfo:item
             })
         })
     }
@@ -59,6 +61,9 @@ class ExamAnalysis extends Component {
         this.setState = (state,callback)=>{
             return;
         };
+    }
+    dataformat(key){
+        return this.state.answerInfo ? this.state.answerInfo[key] : '-/-'
     }
     navItemClick(item){
         console.log(item)
@@ -103,7 +108,32 @@ class ExamAnalysis extends Component {
         }
         return arr;
     }
-
+    renderStuAnswer(){
+        if(this.dataformat('questiontype') == '客观题'){
+            return (
+                <div className="answer_content">
+                    正确答案是：{this.dataformat('standardanswer')}，
+                    我的作答是：{this.dataformat('studentanswer')}
+                </div>
+            )
+        }else if(this.dataformat('questiontype') == '主观题'){
+            var imagename = this.dataformat('studentanswer')
+            var imagelist = imagename.split(',')
+            var arr = []
+            var keyid = 0;
+            for(var img of imagelist){
+                arr.push(
+                    <img src={qishi.util.make_image_url(img)} key={keyid+'img_'}/>
+                )
+                keyid++
+            }
+            return (
+                <div className="answer_content">
+                    {arr}
+                </div>
+            )
+        }
+    }
     render() {
         var self = this
         return (
@@ -161,6 +191,33 @@ class ExamAnalysis extends Component {
                     }
                     </div>
                 </div>
+
+                <div className="que_detail_virtual_html" id="que_detail_virtual_html">
+
+                    <TitleBar
+                        title="试题详情"
+                        BackClick={(function(){
+                            $('#que_detail_virtual_html').hide()
+                        }).bind(this)}
+                    />
+                    <div className="que_title">
+                        <span className="que_num">{this.dataformat('questionname')}</span>
+                        <span className="que_score">
+                        {this.dataformat('questionstudentscore')}分
+                        /
+                            {this.dataformat('questionfullscore')}分
+                    </span>
+                    </div>
+                    <div className="que_answer_box">
+                        <div className="cut_title">考试作答</div>
+                        <div className="cut_line"/>
+                        <div className="answer">
+                            {this.renderStuAnswer()}
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         );
     }
