@@ -48,10 +48,10 @@
         .sub_title{
             background-color: #f2f3f3;
             font-size: 0.9rem;
-            font-weight: bold;
+            color:#222;
             text-align: center;
-            height: 35px;
-            line-height: 35px;
+            height: 2.4rem;
+            line-height: 2.4rem;
             box-sizing: border-box;
         }
         .student_paper_image{
@@ -68,11 +68,14 @@
             position: relative;
             width: 100%;
             background-color: #fff;
+
             .que_row{
                 width: 100%;
                 overflow: hidden;
                 border-bottom: 1px solid #dedede;
-                line-height: 40px;
+                height: 2.4rem;
+                line-height: 2.4rem;
+                font-size: 0.86rem;
                 .que_name{
                     float:left;
                     margin-left: 0.6rem;
@@ -98,20 +101,22 @@
     .que_detail_virtual_html{
         position: absolute;
         top: 0;
-        height: 0;
+        bottom: 0;
         width: 100%;
         height: 100%;
         display: none;
+        overflow: hidden;
         background-color: #f2f2f2;
         .que_title{
             width: 100%;
-            height: 40px;
-            line-height: 40px;
+            height: 2.5rem;
+            line-height: 2.5rem;
             overflow: hidden;
             border-bottom: 1px solid #dedede;
             background-color: #fff;
             padding-left: 0.8rem;
             padding-right: 0.8rem;
+            font-size: 0.9rem;
             .que_num{
                 float:left;
             }
@@ -121,31 +126,28 @@
         }
         .que_answer_box{
             width: 100%;
-            min-height: 200px;
-            margin-top: 10px;
+            min-height: 15rem;
+            margin-top: 0.8rem;
 
             .cut_title{
                 width: 100%;
-                height: 40px;
-                line-height: 40px;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                font-size: 0.9rem;
                 padding-left: 0.8rem;
                 box-sizing: border-box;
                 background-color: #fff;
+                border-bottom: 1px solid #aaa;
             }
-            .cut_line{
-                width: 100%;
-                height: 1px;
-                background-color: #aaa;
-            }
-            .answer{
+            .que_answer_scroll{
                 font-size: 0.8rem;
                 position: absolute;
-                box-sizing: border-box;
-                top: 136px;
+                top: 5.8rem;
                 left:0;
                 bottom:0;
                 width: 100%;
                 overflow-y: auto;
+                background-size: #fff000;
                 .answer_content{
                     width: 100%;
                     min-height: 200px;

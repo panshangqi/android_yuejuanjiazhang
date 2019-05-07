@@ -1,5 +1,10 @@
 .result_report_html{
     width: 100%;
+    height: 100%;
+    background-image: url("../../imgs/banyuanbg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 15rem;
+    text-align: center;
     .theme_circle_yellow{
         position: absolute;
         display: block;
@@ -8,78 +13,68 @@
         border-radius: 14px;
         background-color: @theme_color;
     }
-    .banyuan_bg{
-        width: 100%;
-        height: 120px;
-    }
-    .content{
-        position: absolute;
-        width: 100%;
-        top: 3.2rem;
-        left:0;
-        bottom: 0;
-        padding: 0 0.8rem 0 0.8rem;
+
+    .exam_name{
         text-align: center;
-        .exam_name{
-            text-align: center;
-            color:#fff;
-            font-size: 0.9rem;
+        color:#fff;
+        font-size: 0.9rem;
+    }
+    .general_panel{
+        position: relative;
+        width: 100%;
+        width: 94%;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        min-height: 20rem;
+        padding: 0.8rem;
+        box-shadow: 0 0 8px #ccc;
+        margin: 0.8rem auto 0 auto;
+        .left_kont{
+            .theme_circle_yellow();
+            left: 0.8rem;
         }
-        .general_panel{
-            position: relative;
+        .right_kont{
+            .theme_circle_yellow();
+            right: 0.8rem;
+        }
+        .stu_score{
+            margin-top: 16px;
+            font-size: 1.5rem;
+            span{
+                font-size: 1.7rem;
+            }
+        }
+        table.table_stu_score{
             width: 100%;
-            background-color: #fff;
-            border-radius: 8px;
-            min-height: 20rem;
-            padding: 0.8rem;
-            box-shadow: 0 0 8px #ccc;
-            margin-top: 10px;
-            .left_kont{
-                .theme_circle_yellow();
-                left: 0.8rem;
+            margin-top: 0.8rem;
+            td{
+                font-size: 0.9rem;
             }
-            .right_kont{
-                .theme_circle_yellow();
-                right: 0.8rem;
-            }
-            .stu_score{
-                margin-top: 16px;
-                font-size: 1.5rem;
-                span{
-                    font-size: 1.7rem;
-                }
-            }
-            table.table_stu_score{
-                width: 100%;
-                margin-top: 12px;
+        }
+        table.table_subject_list{
+            margin-top: 1rem;
+            width: 100%;
+            tr{
+                border-top: 1px solid #ddd;
+                font-size: 1.0rem;
                 td{
-
+                    .sub_name{
+                        padding-top: 3px;
+                        color:#222;
+                    }
+                    .sub_score{
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                        span{
+                            color:#222;
+                        }
+                    }
                 }
-            }
-            table.table_subject_list{
-                margin-top: 16px;
-                width: 100%;
-                tr{
-                    border-top: 1px solid #ddd;
-                    td{
-                        .sub_name{
-                            padding-top: 3px;
-                            font-weight: bold;
-                        }
-                        .sub_score{
-                            padding-top: 3px;
-                            padding-bottom: 3px;
-                            span{
-                                font-weight: bold;
-                            }
-                        }
-                    }
-                    td:first-child{
-                        border-right: 1px solid #ddd;
-                    }
-                    td:last-child{
+                td:first-child{
+                    border-right: 1px solid #ddd;
+                }
+                td:last-child{
 
-                    }
                 }
             }
         }

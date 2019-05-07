@@ -30,27 +30,26 @@ class PageFooter extends Component {
                     <tr>
                         <td>
                             <div onClick={this.homeClick.bind(this)}>
-                                <div><img src={this.route == '/home' ? ico_home_active : ico_home} style={{width:'2rem'}}/></div>
+                                <div><img src={this.route == '/home' ? ico_home_active : ico_home} className="icon"/></div>
                                 <div className={this.route == '/home' ? 'text_active': ''}>首 页</div>
                             </div>
 
                         </td>
                         <td>
                             <div>
-                                <div><img src={this.route == '/book' ? ico_book_active :ico_book } style={{width:'2rem'}}/></div>
+                                <div><img src={this.route == '/book' ? ico_book_active :ico_book } className="icon"/></div>
                                 <div className={this.route == '/book' ? 'text_active': ''}>错题本</div>
                             </div>
                         </td>
                         <td>
                             <div onClick={this.personalClick.bind(this)}>
-                                <div><img src={this.route == '/personal' ? ico_personal_active : ico_personal} style={{width:'2rem'}}/></div>
+                                <div><img src={this.route == '/personal' ? ico_personal_active : ico_personal} className="icon3"/></div>
                                 <div className={this.route == '/personal' ? 'text_active': ''}>我 的</div>
                             </div>
                         </td>
                     </tr>
                     </thead>
                 </table>
-                {this.props.children}
             </div>
         );
     }

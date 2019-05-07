@@ -10,6 +10,11 @@ Qishi.config = {
     theme_color: '#FF9647',
     theme_red: '#FF796B'
 }
+
+$('#env_box_0x3320').css({
+    display: process.env.NODE_ENV === 'development' ? 'block': 'none'
+})
+$('#env_box_0x3320').html(process.env.NODE_ENV)
 if(window.localStorage){
     Qishi.config.supportStorage = true
     console.log('This browser supports localStorage');

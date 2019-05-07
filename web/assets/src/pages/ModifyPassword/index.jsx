@@ -87,7 +87,7 @@ class ModifyPassword extends Component {
                                onChange={this.onCertainPassword.bind(this)}
                                value={this.state.certain_password} type="password"
                         />
-                        <button className="theme_red_btn"
+                        <button className="theme_red_btn submit_btn"
                                 style={{marginTop: 32}}
                                 onClick={this.submitClick.bind(this)}
                         >确 认</button>

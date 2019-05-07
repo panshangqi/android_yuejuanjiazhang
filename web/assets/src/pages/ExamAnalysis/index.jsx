@@ -16,8 +16,11 @@ class ExamAnalysis extends Component {
         super(props);
         console.log('ExamAnalysis')
         console.log(props)
-        var tableListHeight = $(window).height() - 45 - 40 - 35*2;
-        var imageListHeight = tableListHeight * 0.34;
+        // 2.8rem 2.5rem 2.4rem
+        var tableListHeight = $(window).height() - getRem2Px(2.8) - getRem2Px(2.5) - getRem2Px(2.4)*2;
+        var imageListHeight = tableListHeight * 0.338;
+        this.tableRowHeight = getRem2Px(2.4)
+        console.log('DETAULT_PX = ' +DETAULT_PX)
         tableListHeight = tableListHeight * 0.66;
         this.state = {
             question_list: [],
@@ -169,7 +172,7 @@ class ExamAnalysis extends Component {
                             <List
                                 width={this.state.tableListWidth}
                                 height={this.state.tableListHeight}
-                                rowHeight={40}
+                                rowHeight={this.tableRowHeight}
                                 rowCount={this.state.question_list.length}
                                 rowRenderer={function({key, index, style}) {
                                     var rowData = self.state.question_list[index]
@@ -210,11 +213,9 @@ class ExamAnalysis extends Component {
                     </div>
                     <div className="que_answer_box">
                         <div className="cut_title">考试作答</div>
-                        <div className="cut_line"/>
-                        <div className="answer">
+                        <div className="que_answer_scroll">
                             {this.renderStuAnswer()}
                         </div>
-
                     </div>
                 </div>
 

@@ -100,39 +100,36 @@ class ResultReport extends Component {
                         this.props.history.push("/home")
                     }).bind(this)}
                 />
-                <img src={banyuanbg} className="banyuan_bg"/>
-                <div className="content">
-                    <div className="exam_name">{this.state.exam_name}</div>
-                    <div className="general_panel">
-                        <div className="left_kont"></div>
-                        <div className="right_kont"></div>
-                        <div className="stu_score"><span>{this.state.student_score}</span>/{this.state.full_score}分</div>
-                        <table className="table_stu_score">
-                            <tbody><tr style={{height: '3.5rem'}}>
-                                <td style={{width: '25%',verticalAlign:'bottom'}}>
-                                    <img src={pen_001} style={{width: '3.3rem'}}/>
-                                </td>
-                                <td style={{width: '40%',fontSize: '1.3rem',verticalAlign:'top'}} className="theme_color">
-                                    总成绩
-                                </td>
-                                <td style={{width: '35%', textAlign:'left', verticalAlign:'bottom'}}>
-                                    <span>
-                                        <div>
-                                            <span className="theme_color"> 年级：{this.state.grade_rank}名</span>
-                                        </div>
-                                        <div>
-                                            <span className="theme_color"> 班级：{this.state.class_rank}名</span>
-                                        </div>
+                <div className="exam_name">{this.state.exam_name}</div>
+                <div className="general_panel">
+                    <div className="left_kont"></div>
+                    <div className="right_kont"></div>
+                    <div className="stu_score"><span>{this.state.student_score}</span>/{this.state.full_score}分</div>
+                    <table className="table_stu_score">
+                        <tbody><tr style={{height: '3.5rem'}}>
+                            <td style={{width: '25%',verticalAlign:'bottom'}}>
+                                <img src={pen_001} style={{width: '3.3rem'}}/>
+                            </td>
+                            <td style={{width: '40%',fontSize: '1.3rem',verticalAlign:'top'}} className="theme_color">
+                                总成绩
+                            </td>
+                            <td style={{width: '35%', textAlign:'left', verticalAlign:'bottom'}}>
+                                <span>
+                                    <div>
+                                        <span className="theme_color"> 年级：{this.state.grade_rank}名</span>
+                                    </div>
+                                    <div>
+                                        <span className="theme_color"> 班级：{this.state.class_rank}名</span>
+                                    </div>
 
-                                </span></td>
-                            </tr></tbody>
-                        </table>
-                        <table className="table_subject_list">
-                            <tbody id="subjectlist_body">
-                            {this.renderSubjectList()}
-                            </tbody>
-                        </table>
-                    </div>
+                            </span></td>
+                        </tr></tbody>
+                    </table>
+                    <table className="table_subject_list">
+                        <tbody id="subjectlist_body">
+                        {this.renderSubjectList()}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         );

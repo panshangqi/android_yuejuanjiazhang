@@ -121,11 +121,13 @@ public class MainActivity extends AppCompatActivity {
 
         });
         if(Public.ENV.equals("development")){
-            webView.loadUrl("http://10.200.6.66:10032/templates/index.html");
             //webView.loadUrl("http://www.baidu.com");
             if (Build.VERSION.SDK_INT >= 19){
+                Log.v("YJ debug", "setWebContentsDebuggingEnabled true");
                 WebView.setWebContentsDebuggingEnabled(true);
             }
+            webView.loadUrl("http://10.200.6.66:10032/templates/index.html");
+
         }else{
             f5Btn.setVisibility(View.GONE);
             webView.loadUrl("file:///android_asset/build/templates/index.html");

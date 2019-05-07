@@ -57,65 +57,47 @@ class PersonalCenter extends Component {
     render() {
         return (
             <div className="personal_center_html">
-                <div className="background_image">
-                    <img className="headbg_img" src={headbg}/>
-                    <div className="headbg"></div>
+                <div className="title">我 的</div>
+                <div className="user_info_panel"
+                     style={{
+                         width:this.panelWidth,
+                         height: this.panelHeight,
+                         marginTop: this.panelMarginTop
+                     }}
+                >
+                    <div className="panel_left">
+                        <div className={'user_name'}>{this.state.stu_name}的家长</div>
+                        <div className={'stu_name'}>学校：{this.state.school_name}</div>
+                    </div>
+                    <div className="panel_right">
+                        <div className="ele1"></div>
+                        <img className="ele2" src={arrow_right}/>
+                        <div className="ele3"></div>
+                    </div>
                 </div>
-
-                <div className="content">
-                    <div className="title">我 的</div>
-                    <div className="user_info_panel"
-                         style={{
-                             width:this.panelWidth,
-                             height: this.panelHeight,
-                             marginTop: this.panelMarginTop
-                         }}
-                    >
-                        <div className="panel_left">
-                            <div className={'user_name'}>{this.state.stu_name}的家长</div>
-                            <div className={'stu_name'}>学校：{this.state.school_name}</div>
-                        </div>
-                        <div className="panel_right">
-                            <div className="ele1"></div>
-                            <img className="ele2" src={arrow_right}/>
-                            <div className="ele3"></div>
-                        </div>
-                    </div>
-                    <div className="function_panel">
-                        <table>
-                            <tbody>
-                            <tr onClick={this.modifyPwdClick.bind(this)}>
-                                <td style={{width: '10%'}}><img src={modify_password} style={{width: '1.5rem'}}/></td>
-                                <td style={{width: '85%'}}>修改密码</td>
-                                <td style={{width: '5%'}}><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
-                            </tr>
-                            <tr onClick={this.generalQuesClick.bind(this)}>
-                                <td><img src={general_question} style={{width: '1.5rem'}}/></td>
-                                <td>常见问题</td>
-                                <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
-                            </tr>
-                            <tr onClick={this.servicePhoneClick.bind(this)}>
-                                <td><img src={service_phone}  style={{width: '1.5rem'}}/></td>
-                                <td>客服电话</td>
-                                <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <button style={{
-                            width: '80%',
-                            borderRadius: 100,
-                            backgroundColor: '#ff8181',
-                            color: '#fff',
-                            height: 45,
-                            marginTop: '2rem',
-                            border: '0'
-                        }}
-                                onClick={this.exitLoginClick.bind(this)}
-                        >
-                            退出登录
-                        </button>
-                    </div>
-
+                <div className="function_panel">
+                    <table>
+                        <tbody>
+                        <tr onClick={this.modifyPwdClick.bind(this)}>
+                            <td style={{width: '10%'}}><img src={modify_password} style={{width: '1.5rem'}}/></td>
+                            <td style={{width: '85%'}}>修改密码</td>
+                            <td style={{width: '5%'}}><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                        </tr>
+                        <tr onClick={this.generalQuesClick.bind(this)}>
+                            <td><img src={general_question} style={{width: '1.5rem'}}/></td>
+                            <td>常见问题</td>
+                            <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                        </tr>
+                        <tr onClick={this.servicePhoneClick.bind(this)}>
+                            <td><img src={service_phone}  style={{width: '1.5rem'}}/></td>
+                            <td>客服电话</td>
+                            <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button className="logout_btn" onClick={this.exitLoginClick.bind(this)}>
+                        退出登录
+                    </button>
                 </div>
                 <PageFooter route="/personal" history={this.props.history}/>
             </div>

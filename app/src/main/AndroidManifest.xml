@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoTitleBar">
+        <meta-data android:name="android.max_aspect" android:value="2.2" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"

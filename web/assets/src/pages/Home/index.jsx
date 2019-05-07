@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import qishi from '@components/qishi.jsx';
 import TitleBar from '@components/TitleBar'
 import PageFooter from '@components/PageFooter'
-import history_exam from '@imgs/history_exam.png'
+import left_img from '@imgs/home_cut_001.png'
+import right_img from '@imgs/home_cut_002.png'
 import './style.less'
 
 class Home extends Component {
@@ -87,8 +88,10 @@ class Home extends Component {
                             <div><button onClick={this.examAnalysisClick.bind(this)}>试题分析</button></div>
                         </div>
                     </div>
-                    <div>
-                        <img className="history_image" src={history_exam}/>
+                    <div className="cut_line001">
+                        <img className="left" src={left_img}/>
+                        <span className="mid">历次考试</span>
+                        <img className="right" src={right_img}/>
                     </div>
                 </div>
                 <PageFooter route="/home" history={this.props.history}/>
