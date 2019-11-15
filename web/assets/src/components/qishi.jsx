@@ -73,6 +73,19 @@ Qishi.util = {
             return "";
         }
     },
+    mark_http_url: function(route){
+        var ip = Qishi.cookies.get_cookies('yuejuan_ip');
+        console.log(ip)
+        if(Qishi.config.ENV == "development"){
+            return route; // /xx/xx/ss
+        }
+        if(ip){
+            return `http://${ip}${route}`
+        }else{
+            Qishi.util.alert("访问错误")
+            return "";
+        }
+    },
     make_image_url(image_name){
         var ip = Qishi.cookies.get_cookies('yuejuan_ip');
         if(Qishi.config.ENV == "development"){
@@ -85,6 +98,12 @@ Qishi.util = {
             Qishi.util.alert("访问错误")
             return "";
         }
+    },
+    make_image_url2(image_name){
+        if(Qishi.config.ENV == "development"){
+            return `/ctb/showimage?path=${image_name}`
+        }
+        return `http://114.116.116.99/ctb/showimage?path=${image_name}`
     }
 }
 
@@ -158,6 +177,32 @@ http://49.4.48.115
             console.log(err)
         }
 
+    },
+    get_ajax:function (url, params, fn, errfn) {
+        let params_string = ''
+        params.studentid = Qishi.cookies.get_userid()
+        params.authtoken = Qishi.cookies.get_token()
+        for(let key in params){
+            params_string += params_string.length == 0 ? "?" : "&";
+            params_string += key + '=' + params[key]
+        }
+        let final_url = url + params_string
+        $.ajax({
+            type: 'get',
+            url: final_url,
+            dataType: 'json',
+            success: function (data) {
+                if(typeof fn == 'function'){
+                    fn(data)
+                }
+            },
+            error: function (err) {
+                console.log(err)
+                if(typeof errfn == 'function'){
+                    errfn(err)
+                }
+            }
+        })
     }
 };
 

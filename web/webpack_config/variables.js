@@ -27,7 +27,7 @@ _exports.img_root = `${dist_static_root}/imgs`;
 //dev
 _exports.proxy_host = 'http://local.zx-math.test.17zuoye.net';
 _exports.proxy = [];
-_exports.port = 10032;
+_exports.port = 10033;
 _exports.dev_publicPath = '/';
 _exports.dev_insert_htmls = [];
 

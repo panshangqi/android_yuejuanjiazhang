@@ -2,7 +2,8 @@ const Webpack = require('webpack');
 const WebpackBaseConfig = require('./webpack.base.config');
 const InsertHtmlPlugin = require('./plugin/instert-html-plugin.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const shell = require('shelljs');
 
 const vars = require('./variables');
@@ -17,7 +18,8 @@ WebpackBaseConfig.mode = 'production';
 WebpackBaseConfig.output.filename = `${vars.dist_static_root}/[name].[chunkhash:8].js`;
 
 const css_name = `${vars.css_root}/[name].[chunkhash:8].css`;
-WebpackBaseConfig.plugins.push(new ExtractTextPlugin(css_name));
+//WebpackBaseConfig.plugins.push(new ExtractTextPlugin(css_name));
+WebpackBaseConfig.plugins.push(new MiniCssExtractPlugin(css_name));
 
 const htmls = [];
 insert_htmls.forEach(html => {

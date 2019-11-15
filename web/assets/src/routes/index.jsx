@@ -11,6 +11,7 @@ import Login from '@pages/Login'
 import PageFooter from '@components/PageFooter'
 import Page from '@components/Page'
 import Personal from '@pages/Personal'
+import Book from '@pages/Book'
 import ModifyPassword from '@pages/ModifyPassword'
 import ServicePhone from '@pages/ServicePhone'
 import GeneralQuestion from '@pages/GeneralQuestion'
@@ -18,6 +19,7 @@ import ExamAnalysis from '@pages/ExamAnalysis'
 import ResultReport from '@pages/ResultReport'
 import QuestionDetail from '@pages/QuestionDetail'
 import Home from '@pages/Home'
+import ErrorBookList from '@pages/ErrorBookList'
 
 
 var history = createHashHistory();
@@ -43,6 +45,8 @@ ReactDOM.render(
                 <Route exact path="/exam_analysis" component={ExamAnalysis}/>
                 <Route exact path="/result_report" component={ResultReport}/>
                 <Route exact path="/home" component={Home}/>
+                <Route exact path="/book" component={Book}/>
+                <Route exact path="/error_book_list" component={ErrorBookList}/>
                 <Route component={Login} />
             </Switch>
         </Page>

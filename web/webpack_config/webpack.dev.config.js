@@ -1,7 +1,8 @@
 const WebpackDevServer = require('webpack-dev-server');
 const Webpack = require('webpack');
 const WebpackHotMiddleware = require('webpack-hot-middleware');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const InsertHtmlPlugin = require('./plugin/instert-html-plugin.js');
 
 const WebpackBaseConfig = require('./webpack.base.config');
@@ -18,7 +19,11 @@ var server;
 
 var default_proxy = {
     "/exam/*":{
-        "target":"http://49.4.48.115:80",
+        "target":"http://114.116.116.99:88",
+        "changeOrigin": true
+    },
+    "/ctb/*":{
+        "target":"http://114.116.116.99",
         "changeOrigin": true
     }
 };
@@ -46,10 +51,12 @@ for(let p in WebpackBaseConfig.entry){
     WebpackBaseConfig.entry[p] = [`webpack-dev-server/client?http://localhost:${port}/`, WebpackBaseConfig.entry[p]];
     WebpackBaseConfig.entry[p].unshift('webpack/hot/dev-server');
 }
-
+const css_rules = WebpackBaseConfig.module.rules.find((v => `${v.test}` === '/\\.(less|css)$/'));
+css_rules.use.unshift('css-hot-loader');
 const css_name = `${vars.css_root}/[name].[hash:8].css`;
 
-WebpackBaseConfig.plugins.push(new ExtractTextPlugin(css_name));
+//WebpackBaseConfig.plugins.push(new ExtractTextPlugin(css_name));
+WebpackBaseConfig.plugins.push(new MiniCssExtractPlugin(css_name));
 WebpackBaseConfig.plugins.push(new Webpack.HotModuleReplacementPlugin());
 WebpackBaseConfig.plugins.push(new Webpack.NoEmitOnErrorsPlugin());
 

@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const graphs = require('./graphs/graphs');
 const vars = require('./variables');
 
@@ -43,23 +44,40 @@ module.exports = {
             ]
         }, {
             test: /\.(less|css)$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: ['css-loader',
-                    {
-                        loader: 'less-loader',
-                        options: {
-                            globalVars:{
-                               'theme_color': '#FF9647',
-                               'theme_red': '#FF796B',
-                               'theme_green': '#13D469',
-                               'img_root': '/static/imgs'
-                            },
-                            javascriptEnabled: true
-                        }
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'postcss-loader',
+                {
+                    loader: 'less-loader',
+                    options: {
+                        globalVars:{
+                            'theme_color': '#FF9647',
+                            'theme_red': '#FF796B',
+                            'theme_green': '#13D469',
+                            'img_root': '/static/imgs'
+                        },
+                        javascriptEnabled: true
                     }
-                ]
-            }),
+                }
+            ],
+            // use: ExtractTextPlugin.extract({
+            //     fallback: 'style-loader',
+            //     use: ['css-loader',
+            //         {
+            //             loader: 'less-loader',
+            //             options: {
+            //                 globalVars:{
+            //                    'theme_color': '#FF9647',
+            //                    'theme_red': '#FF796B',
+            //                    'theme_green': '#13D469',
+            //                    'img_root': '/static/imgs'
+            //                 },
+            //                 javascriptEnabled: true
+            //             }
+            //         }
+            //     ]
+            // }),
         }, {
             test: /\.(bmp|gif|jpe?g|png|ico)$/,
             exclude: /(node_modules)/,
