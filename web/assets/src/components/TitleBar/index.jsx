@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import qishi from '@components/qishi.jsx';
 import toback from '@imgs/toback.png'
 import './style.less'
+import $ from 'jquery'
 
 class TitleBar extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class TitleBar extends Component {
             this.style.backgroundColor = props.backgroundColor;
         }
         console.log(this.back_ico)
+
     }
     componentWillUnmount(){
 
@@ -28,9 +30,12 @@ class TitleBar extends Component {
             this.BackClick();
         }
     }
+    getTitleBarHeight(){
+        return $('#titlebar_html').height()
+    }
     render() {
         return (
-            <div className="titlebar_html" style={this.style}>
+            <div className="titlebar_html" style={this.style} id="titlebar_html">
                 <img className="titlebar_title_back_img"
                      src={toback}
                      onClick={this.backClick.bind(this)}

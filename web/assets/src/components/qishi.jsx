@@ -8,7 +8,8 @@ Qishi.config = {
     cookiestr: "userid=16031620018;ip=49.4.48.115;token=4419604AF61EFE64FFFA9D91620102F7", //网页测试 123015001
     responseOK: '0001',
     theme_color: '#FF9647',
-    theme_red: '#FF796B'
+    theme_red: '#FF796B',
+    book_ip: 'http://114.116.116.99' //错题本
 }
 
 $('#env_box_0x3320').css({
@@ -74,17 +75,11 @@ Qishi.util = {
         }
     },
     mark_http_url: function(route){
-        var ip = Qishi.cookies.get_cookies('yuejuan_ip');
-        console.log(ip)
+
         if(Qishi.config.ENV == "development"){
             return route; // /xx/xx/ss
         }
-        if(ip){
-            return `http://${ip}${route}`
-        }else{
-            Qishi.util.alert("访问错误")
-            return "";
-        }
+        return `${Qishi.config.book_ip}${route}`
     },
     make_image_url(image_name){
         var ip = Qishi.cookies.get_cookies('yuejuan_ip');
@@ -103,7 +98,7 @@ Qishi.util = {
         if(Qishi.config.ENV == "development"){
             return `/ctb/showimage?path=${image_name}`
         }
-        return `http://114.116.116.99/ctb/showimage?path=${image_name}`
+        return `${Qishi.config.book_ip}/ctb/showimage?path=${image_name}`
     }
 }
 

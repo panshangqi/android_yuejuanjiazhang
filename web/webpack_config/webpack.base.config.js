@@ -45,7 +45,12 @@ module.exports = {
         }, {
             test: /\.(less|css)$/,
             use: [
-                MiniCssExtractPlugin.loader,
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        publicPath: './'
+                    }
+                },
                 'css-loader',
                 'postcss-loader',
                 {

@@ -1,21 +1,4 @@
 @img _root: /static/imgs;
-.service_phone_html {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background-color: #fff;
-}
-.service_phone_html .bg_box {
-  margin-top: 3rem;
-}
-.service_phone_html .telephone {
-  font-size: 1.6rem;
-  color: #FF9647;
-}
-@img _root: /static/imgs;
 html,
 body {
   -webkit-user-select: none;
@@ -47,7 +30,7 @@ body {
   background-color: #FAAD14;
   border: 1px solid #FAAD14;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 0.78125vw;
   cursor: pointer;
   transition: background-color 0.6s;
 }
@@ -58,7 +41,7 @@ body {
 }
 .theme_red_btn {
   width: 100%;
-  border-radius: 100px;
+  border-radius: 19.53125vw;
   background-color: #ff8181;
   color: #fff;
   height: 2.4rem;
@@ -87,19 +70,19 @@ body {
   background-color: #ffffff;
 }
 .ant-modal-header {
-  padding: 7px 10px 7px 10px;
+  padding: 1.36719vw 1.95313vw 1.36719vw 1.95313vw;
   background-color: #FF9647;
 }
 .ant-modal-title {
   color: #fff;
 }
 .ant-modal-close-x:before {
-  height: 20px;
+  height: 3.90625vw;
 }
 .ant-modal-close-x {
-  width: 40px;
-  height: 40px;
-  margin-top: -8px;
+  width: 7.8125vw;
+  height: 7.8125vw;
+  margin-top: -1.5625vw;
   color: #fff;
 }
 .ant-modal-close-x:hover {
@@ -122,26 +105,26 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 120px;
-  line-height: 36px;
-  height: 36px;
+  width: 23.4375vw;
+  line-height: 7.03125vw;
+  height: 7.03125vw;
   text-align: center;
   background-color: #fff;
-  box-shadow: 0 0 7px #777;
+  box-shadow: 0 0 1.36719vw #777;
   display: none;
   z-index: 100;
-  border-radius: 4px;
+  border-radius: 0.78125vw;
   cursor: pointer;
 }
 .theme-menu:hover {
   background-color: #e6f7ff;
 }
 .ant-popover-buttons button {
-  font-size: 12px;
+  font-size: 2.34375vw;
 }
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 11px;
+  width: 0.97656vw;
+  height: 2.14844vw;
   background-color: #F5F5F550;
 }
 /*定义滚动条轨道 内阴影+圆角*/
@@ -150,261 +133,18 @@ body {
 }
 /*定义滑块 内阴影+圆角*/
 ::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 1.95313vw;
   background-color: rgba(0, 0, 0, 0.2);
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #969696;
 }
-@img _root: /static/imgs;
-.page_footer {
-  position: absolute;
-  width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
-  bottom: 0;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-}
-.page_footer .foot_table {
-  width: 100%;
-}
-.page_footer .foot_table tr td {
-  font-size: 0.8rem;
-  text-align: center;
-}
-.page_footer .icon {
-  width: 1.8rem;
-}
-.page_footer .icon3 {
-  width: 1.7rem;
-}
-.page_footer .text_active {
-  color: #FF9647;
-}
-@img _root: /static/imgs;
-.page_base_html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-@img _root: /static/imgs;
-.personal_center_html {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-color: #f2f2f2;
-  background-image: url(.././imgs/personal_header_bg.png);
-  background-repeat: no-repeat;
-  background-size: 100% 10rem;
-}
-.personal_center_html .title {
-  font-size: 1.2rem;
-  text-align: center;
-  color: #fff;
-  margin-top: 1.2rem;
-}
-.personal_center_html .user_info_panel {
-  position: relative;
-  width: 90%;
-  height: 8rem;
-  background-color: #fff;
-  border-radius: 0.7rem;
-  box-shadow: 0 0 10px #ccc;
-  text-align: center;
-  margin: 2.5rem auto 0.4rem auto;
-  padding: 1.0rem;
-}
-.personal_center_html .user_info_panel .circle_yellow {
-  position: absolute;
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-}
-.personal_center_html .user_info_panel .panel_left {
-  display: inline-block;
-  width: 91%;
-  height: auto;
-  text-align: left;
-}
-.personal_center_html .user_info_panel .panel_right {
-  display: inline-block;
-  width: 8%;
-  height: auto;
-}
-.personal_center_html .user_info_panel .panel_right .ele1 {
-  position: absolute;
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-  top: 1.1rem;
-}
-.personal_center_html .user_info_panel .panel_right .ele2 {
-  width: 0.8rem;
-}
-.personal_center_html .user_info_panel .panel_right .ele3 {
-  position: absolute;
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-  bottom: 1.1rem;
-}
-.personal_center_html .user_info_panel table {
-  width: 100%;
-}
-.personal_center_html .user_info_panel .right_tip {
-  position: relative;
-  height: 100%;
-}
-.personal_center_html .user_info_panel .right_tip .circle_yellow {
-  position: absolute;
-  display: block;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-}
-.personal_center_html .user_info_panel .right_tip .ele1 {
-  position: absolute;
-  display: block;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-  top: 10px;
-}
-.personal_center_html .user_info_panel .right_tip .ele2 {
-  position: absolute;
-  top: 50%;
-  margin-top: -0.8rem;
-}
-.personal_center_html .user_info_panel .right_tip .ele2 img {
-  width: 0.8rem;
-}
-.personal_center_html .user_info_panel .right_tip .ele3 {
-  position: absolute;
-  display: block;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem;
-  background-color: #FF9647;
-  bottom: 10px;
-}
-.personal_center_html .user_info_panel .user_name {
-  font-size: 1.0rem;
-  color: #111;
-}
-.personal_center_html .user_info_panel .stu_name {
-  margin-top: 0.8rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-.personal_center_html .function_panel {
-  position: relative;
-  width: 90%;
-  height: auto;
-  background-color: #fff;
-  border-radius: 0.7rem;
-  box-shadow: 0 0 10px #ccc;
-  text-align: center;
-  margin: 0.5rem auto 0.4rem auto;
-  padding: 1.0rem;
-}
-.personal_center_html .function_panel table {
-  width: 100%;
-}
-.personal_center_html .function_panel table tr {
-  font-size: 1.0rem;
-  height: 3rem;
-}
-.personal_center_html .function_panel table tr td {
-  text-align: left;
-}
-.personal_center_html .function_panel .logout_btn {
-  width: 80%;
-  font-size: 1.0rem;
-  border-radius: 100px;
-  background-color: #ff8181;
-  color: #fff;
-  height: 2.6rem;
-  margin-top: 2rem;
-  border: 0;
-}
-@img _root: /static/imgs;
-.titlebar_html {
-  width: 100%;
-  height: 2.8rem;
-}
-.titlebar_html .back_button {
-  width: 3rem;
-  height: 2.8rem;
-}
-.titlebar_html .titlebar_title_back_img {
-  width: 1.8rem;
-  position: absolute;
-  left: 0.7rem;
-  top: 0.5rem;
-}
-.titlebar_html .titlebar_title {
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  height: 2.8rem;
-  line-height: 2.8rem;
-  font-size: 1.2rem;
-  background-color: #FF9647;
-}
-@img _root: /static/imgs;
-.modify_pwd_html {
-  overflow: hidden;
-  width: 100%;
-}
-.modify_pwd_html .bg_image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.modify_pwd_html .content {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-.modify_pwd_html .content .op_panpel {
-  width: 90%;
-  margin: 3rem auto 0 auto;
-  background-color: #fff;
-  border-radius: 10px;
-  height: auto;
-  box-shadow: 0 0 10px #ccc;
-  padding: 0.8rem 0.8rem 1.5rem 0.8rem;
-}
-.modify_pwd_html .content .op_panpel .subtitle {
-  font-size: 1rem;
-}
-.modify_pwd_html .content .op_panpel .input_style {
-  border: 1px solid #ff9647;
-  height: 2.2rem;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  font-size: 0.88rem;
-}
-.modify_pwd_html .content .op_panpel .submit_btn {
-  font-size: 0.9rem;
-}
+
 @img _root: /static/imgs;
 .login_html {
   width: 100%;
   height: 100%;
-  background-image: url(.././imgs/login_bg.jpg);
+  background-image: url(././imgs/login_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 4rem;
@@ -436,7 +176,317 @@ body {
   font-size: 0.9rem;
   color: #fff;
 }
+
 @img _root: /static/imgs;
+.page_footer {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.page_footer .foot_table {
+  width: 100%;
+}
+.page_footer .foot_table tr td {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.page_footer .icon {
+  width: 1.8rem;
+}
+.page_footer .icon3 {
+  width: 1.7rem;
+}
+.page_footer .text_active {
+  color: #FF9647;
+}
+
+@img _root: /static/imgs;
+.page_base_html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@img _root: /static/imgs;
+.personal_center_html {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  background-image: url(././imgs/personal_header_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 10rem;
+}
+.personal_center_html .title {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 1.2rem;
+}
+.personal_center_html .user_info_panel {
+  position: relative;
+  width: 90%;
+  height: 8rem;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 1.95313vw #ccc;
+  text-align: center;
+  margin: 2.5rem auto 0.4rem auto;
+  padding: 1.0rem;
+}
+.personal_center_html .user_info_panel .circle_yellow {
+  position: absolute;
+  display: block;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+}
+.personal_center_html .user_info_panel .panel_left {
+  display: inline-block;
+  width: 91%;
+  height: auto;
+  text-align: left;
+}
+.personal_center_html .user_info_panel .panel_right {
+  display: inline-block;
+  width: 8%;
+  height: auto;
+}
+.personal_center_html .user_info_panel .panel_right .ele1 {
+  position: absolute;
+  display: block;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+  top: 1.1rem;
+}
+.personal_center_html .user_info_panel .panel_right .ele2 {
+  width: 0.8rem;
+}
+.personal_center_html .user_info_panel .panel_right .ele3 {
+  position: absolute;
+  display: block;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+  bottom: 1.1rem;
+}
+.personal_center_html .user_info_panel table {
+  width: 100%;
+}
+.personal_center_html .user_info_panel .right_tip {
+  position: relative;
+  height: 100%;
+}
+.personal_center_html .user_info_panel .right_tip .circle_yellow {
+  position: absolute;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+}
+.personal_center_html .user_info_panel .right_tip .ele1 {
+  position: absolute;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+  top: 1.95313vw;
+}
+.personal_center_html .user_info_panel .right_tip .ele2 {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.8rem;
+}
+.personal_center_html .user_info_panel .right_tip .ele2 img {
+  width: 0.8rem;
+}
+.personal_center_html .user_info_panel .right_tip .ele3 {
+  position: absolute;
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.7rem;
+  background-color: #FF9647;
+  bottom: 1.95313vw;
+}
+.personal_center_html .user_info_panel .user_name {
+  font-size: 1.0rem;
+  color: #111;
+}
+.personal_center_html .user_info_panel .stu_name {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+.personal_center_html .function_panel {
+  position: relative;
+  width: 90%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 1.95313vw #ccc;
+  text-align: center;
+  margin: 0.5rem auto 0.4rem auto;
+  padding: 1.0rem;
+}
+.personal_center_html .function_panel table {
+  width: 100%;
+}
+.personal_center_html .function_panel table tr {
+  font-size: 1.0rem;
+  height: 3rem;
+}
+.personal_center_html .function_panel table tr td {
+  text-align: left;
+}
+.personal_center_html .function_panel .logout_btn {
+  width: 80%;
+  font-size: 1.0rem;
+  border-radius: 19.53125vw;
+  background-color: #ff8181;
+  color: #fff;
+  height: 2.6rem;
+  margin-top: 2rem;
+  border: 0;
+}
+
+@img _root: /static/imgs;
+.book_html .content .subject_list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.book_html .content .subject_list .item {
+  margin-top: 4.88281vw;
+  width: 39.0625vw;
+  height: 19.53125vw;
+  border-radius: 1.95313vw;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+}
+.book_html .content .subject_list .item img {
+  width: 39.0625vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.book_html .content .subject_list .item .info {
+  color: #333;
+  width: 100%;
+  position: absolute;
+  left: 52%;
+  top: 5.85938vw;
+  z-index: 10;
+}
+.book_html .content .subject_list .item .info .name {
+  font-size: 4.29688vw;
+}
+.book_html .content .subject_list .item .info .tip {
+  font-size: 3.125vw;
+}
+
+@img _root: /static/imgs;
+.titlebar_html {
+  width: 100%;
+  height: 10.74219vw;
+}
+.titlebar_html .back_button {
+  width: 1.95313vw;
+  height: 1.95313vw;
+}
+.titlebar_html .titlebar_title_back_img {
+  width: 7.8125vw;
+  position: absolute;
+  left: 1.95313vw;
+  top: 1.95313vw;
+}
+.titlebar_html .titlebar_title {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  height: 10.74219vw;
+  line-height: 10.74219vw;
+  font-size: 4.29688vw;
+  background-color: #FF9647;
+}
+
+@img _root: /static/imgs;
+.modify_pwd_html {
+  overflow: hidden;
+  width: 100%;
+}
+.modify_pwd_html .bg_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modify_pwd_html .content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.modify_pwd_html .content .op_panpel {
+  width: 90%;
+  margin: 3rem auto 0 auto;
+  background-color: #fff;
+  border-radius: 1.95313vw;
+  height: auto;
+  box-shadow: 0 0 1.95313vw #ccc;
+  padding: 0.8rem 0.8rem 1.5rem 0.8rem;
+}
+.modify_pwd_html .content .op_panpel .subtitle {
+  font-size: 1rem;
+}
+.modify_pwd_html .content .op_panpel .input_style {
+  border: 1px solid #ff9647;
+  height: 2.2rem;
+  margin-top: 2.34375vw;
+  margin-bottom: 2.34375vw;
+  font-size: 0.88rem;
+}
+.modify_pwd_html .content .op_panpel .submit_btn {
+  font-size: 0.9rem;
+}
+
+@img _root: /static/imgs;
+.service_phone_html {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+.service_phone_html .bg_box {
+  margin-top: 3rem;
+}
+.service_phone_html .telephone {
+  font-size: 1.6rem;
+  color: #FF9647;
+}
+
+@img _root: /static/imgs;
+
 @img _root: /static/imgs;
 .menu_nav_html {
   width: 100%;
@@ -465,21 +515,22 @@ body {
   line-height: 2.5rem;
   text-align: center;
 }
+
 @img _root: /static/imgs;
 .exam_analysis_html .loading {
   position: absolute;
   width: 100%;
-  height: 60px;
+  height: 11.71875vw;
   top: 50%;
   left: 0;
-  margin-top: -30px;
+  margin-top: -5.85938vw;
   text-align: center;
 }
 .exam_analysis_html .subject_list {
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
-  height: 42px;
+  height: 8.20313vw;
   -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
@@ -487,10 +538,10 @@ body {
 .exam_analysis_html .subject_list ul {
   padding: 0;
   margin: 0;
-  width: 400px;
-  max-width: 750px;
+  width: 78.125vw;
+  max-width: 146.48438vw;
   white-space: nowrap;
-  min-width: 320px;
+  min-width: 62.5vw;
   list-style-type: none;
   list-style: none;
   height: auto;
@@ -499,9 +550,9 @@ body {
 }
 .exam_analysis_html .subject_list ul li {
   list-style: none;
-  padding: 0px 16px 0px 16px;
-  line-height: 42px;
-  height: 42px;
+  padding: 0px 3.125vw 0px 3.125vw;
+  line-height: 8.20313vw;
+  height: 8.20313vw;
   margin: 0;
   display: inline;
   font-size: 1.0rem;
@@ -525,7 +576,7 @@ body {
 }
 .exam_analysis_html .content .student_paper_image {
   width: 100%;
-  height: 250px;
+  height: 48.82813vw;
   overflow-y: auto;
   overflow-x: hidden;
   background-color: #fff;
@@ -558,9 +609,9 @@ body {
   position: absolute;
   width: 100%;
   top: 50%;
-  height: 25px;
+  height: 4.88281vw;
   left: 0;
-  margin-top: -20px;
+  margin-top: -3.90625vw;
   font-size: 0.8rem;
   text-align: center;
 }
@@ -618,13 +669,14 @@ body {
 }
 .exam_analysis_html .que_detail_virtual_html .que_answer_box .que_answer_scroll .answer_content {
   width: 100%;
-  min-height: 200px;
+  min-height: 39.0625vw;
   padding: 0.8rem;
   background-color: #fff;
 }
 .exam_analysis_html .que_detail_virtual_html .que_answer_box img {
   width: 100%;
 }
+
 @img _root: /static/imgs;
 .result_report_html {
   width: 100%;
@@ -637,9 +689,9 @@ body {
 .result_report_html .theme_circle_yellow {
   position: absolute;
   display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 2.73438vw;
   background-color: #FF9647;
 }
 .result_report_html .exam_name {
@@ -655,29 +707,29 @@ body {
   border-radius: 0.5rem;
   min-height: 20rem;
   padding: 0.8rem;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 0 0 1.5625vw #ccc;
   margin: 0.8rem auto 0 auto;
 }
 .result_report_html .general_panel .left_kont {
   position: absolute;
   display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 2.73438vw;
   background-color: #FF9647;
   left: 0.8rem;
 }
 .result_report_html .general_panel .right_kont {
   position: absolute;
   display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
+  width: 2.73438vw;
+  height: 2.73438vw;
+  border-radius: 2.73438vw;
   background-color: #FF9647;
   right: 0.8rem;
 }
 .result_report_html .general_panel .stu_score {
-  margin-top: 16px;
+  margin-top: 3.125vw;
   font-size: 1.5rem;
 }
 .result_report_html .general_panel .stu_score span {
@@ -699,12 +751,12 @@ body {
   font-size: 1.0rem;
 }
 .result_report_html .general_panel table.table_subject_list tr td .sub_name {
-  padding-top: 3px;
+  padding-top: 0.58594vw;
   color: #222;
 }
 .result_report_html .general_panel table.table_subject_list tr td .sub_score {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 0.58594vw;
+  padding-bottom: 0.58594vw;
 }
 .result_report_html .general_panel table.table_subject_list tr td .sub_score span {
   color: #222;
@@ -712,6 +764,7 @@ body {
 .result_report_html .general_panel table.table_subject_list tr td:first-child {
   border-right: 1px solid #ddd;
 }
+
 @img _root: /static/imgs;
 .que_detail_html {
   width: 100%;
@@ -719,8 +772,8 @@ body {
 }
 .que_detail_html .que_title {
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 7.8125vw;
+  line-height: 7.8125vw;
   overflow: hidden;
   border-bottom: 1px solid #dedede;
   background-color: #fff;
@@ -735,14 +788,14 @@ body {
 }
 .que_detail_html .que_answer_box {
   width: 100%;
-  min-height: 200px;
+  min-height: 39.0625vw;
   background-color: #fff;
   padding: 0.8rem;
-  margin-top: 10px;
+  margin-top: 1.95313vw;
 }
 .que_detail_html .que_answer_box .answer {
   font-size: 0.8rem;
-  margin-top: 9px;
+  margin-top: 1.75781vw;
 }
 .que_detail_html .que_answer_box .cut_line {
   width: 100%;
@@ -752,6 +805,7 @@ body {
 .que_detail_html .que_answer_box img {
   width: 100%;
 }
+
 @img _root: /static/imgs;
 .home_html .content {
   padding: 0.8rem;
@@ -787,7 +841,7 @@ body {
 .home_html .content .review_panel .button_box button {
   background-color: transparent;
   border: 1px solid #fff;
-  border-radius: 100px;
+  border-radius: 19.53125vw;
   font-size: 1.0rem;
   padding: 0.2rem 1.3rem 0.2rem 1.3rem;
 }
@@ -821,3 +875,44 @@ body {
   margin-top: 1rem;
   width: 100%;
 }
+
+@img _root: /static/imgs;
+.error_book_html .content {
+  padding: 2.34375vw;
+  overflow-y: auto;
+}
+.error_book_html .content .exam_name {
+  font-size: 4.29688vw;
+}
+.error_book_html .content .question_list .item {
+  border-radius: 1.95313vw;
+  border: 1px solid rgba(255, 150, 71, 0.9);
+  background-color: #fff;
+  margin-top: 2.92969vw;
+}
+.error_book_html .content .question_list .item .head_bar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 5.85938vw;
+  border-bottom: 1px solid #bbb;
+  height: 7.8125vw;
+  line-height: 7.8125vw;
+  padding-left: 0.97656vw;
+  padding-right: 0.97656vw;
+}
+.error_book_html .content .question_list .item .head_bar .number {
+  font-size: 4.29688vw;
+}
+.error_book_html .content .question_list .item .head_bar .score {
+  font-size: 3.90625vw;
+}
+.error_book_html .content .question_list .item .image {
+  padding-top: 0.97656vw;
+  padding-bottom: 0.97656vw;
+}
+.error_book_html .content .question_list .item .image img {
+  width: 100%;
+}
+

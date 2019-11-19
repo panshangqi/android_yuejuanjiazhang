@@ -6,6 +6,7 @@ import qishi from '@components/qishi'
 import login_bg from '@imgs/login_bg.jpg'
 import TitleBar from '@components/TitleBar'
 import PageFooter from '@components/PageFooter'
+import $ from "jquery";
 
 class ErrorBookList extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class ErrorBookList extends Component {
         console.log(props)
         this.state = {
             error_list: [],
+            exam_name: '',
             subjectcode: (props.location.state && props.location.state.subjectcode) || "B964E4FACF962CBD493D1D89DC4044CB"
         };
 
@@ -33,9 +35,16 @@ class ErrorBookList extends Component {
             if(data.codeid == qishi.config.responseOK){
 
                 this.setState({
-                    error_list: data.data
+                    error_list: data.data,
+                    exam_name: data.data.length > 0 ? data.data[0].examname: ''
                 })
             }
+        })
+
+        let windowH = $(window).height() - this.refs.title_bar.getTitleBarHeight()
+        console.log(windowH, this.refs.title_bar.getTitleBarHeight())
+        $('#error_content').css({
+            height: windowH + 'px'
         })
     }
     itemClick(item){
@@ -78,8 +87,14 @@ class ErrorBookList extends Component {
                     BackClick={(function(){
                         this.props.history.push("/book")
                     }).bind(this)}
+                    ref="title_bar"
                 />
-                <div className="content">
+                <div className="content" id="error_content">
+                    <div className="exam_name">
+                        {this.state.exam_name}
+                        <span style={{marginLeft: 15}}/>
+                        <span style={{color: '#FF7E7E'}}>{this.state.error_list.length}道错题</span>
+                    </div>
                     <div className="question_list">
                         {this.errorListRender()}
                     </div>
