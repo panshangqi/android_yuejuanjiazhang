@@ -19,18 +19,22 @@
             }
         </style>
         <script>
-            console.log('------------------屏幕适配 动态计算-font-size--------------------------')
-            var designWidth = 414 //以文档宽度为基准 以Iphone6 Plus 414*736为基准
-            var clientWidth = document.documentElement.clientWidth || document.body.clientWidth
-            var default_px = 16 * (clientWidth / designWidth)
-            console.log('document width = '+ clientWidth + ', font-size: ' + default_px)
-            document.documentElement.style.fontSize = default_px + 'px'
-            window.onresize = function () {
-                document.documentElement.style.fontSize = default_px +'px'
-            }
-            var DETAULT_PX = default_px
-            function getRem2Px(rems){
-                return parseInt(rems * DETAULT_PX)
+            // console.log('------------------屏幕适配 动态计算-font-size--------------------------')
+            // var designWidth = 414 //以文档宽度为基准 以Iphone6 Plus 414*736为基准
+            // var clientWidth = document.documentElement.clientWidth || document.body.clientWidth
+            // var default_px = 16 * (clientWidth / designWidth)
+            // console.log('document width = '+ clientWidth + ', font-size: ' + default_px)
+            // document.documentElement.style.fontSize = default_px + 'px'
+            // window.onresize = function () {
+            //     document.documentElement.style.fontSize = default_px +'px'
+            // }
+            // var DETAULT_PX = default_px
+            // function getRem2Px(rems){
+            //     return parseInt(rems * DETAULT_PX)
+            // }
+            let rate = document.documentElement.clientWidth / 512
+            function getRealPX(_px){
+                return _px * rate
             }
         </script>
     </head>

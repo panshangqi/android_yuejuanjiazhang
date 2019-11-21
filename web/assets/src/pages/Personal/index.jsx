@@ -79,19 +79,19 @@ class PersonalCenter extends Component {
                     <table>
                         <tbody>
                         <tr onClick={this.modifyPwdClick.bind(this)}>
-                            <td style={{width: '10%'}}><img src={modify_password} style={{width: '1.5rem'}}/></td>
+                            <td style={{width: '10%'}}><img src={modify_password} className="icon"/></td>
                             <td style={{width: '85%'}}>修改密码</td>
-                            <td style={{width: '5%'}}><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                            <td style={{width: '5%'}}><img src={arrow_right} className="arrow"/></td>
                         </tr>
                         <tr onClick={this.generalQuesClick.bind(this)}>
-                            <td><img src={general_question} style={{width: '1.5rem'}}/></td>
+                            <td><img src={general_question} className="icon"/></td>
                             <td>常见问题</td>
-                            <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                            <td><img src={arrow_right} className="arrow"/></td>
                         </tr>
                         <tr onClick={this.servicePhoneClick.bind(this)}>
-                            <td><img src={service_phone}  style={{width: '1.5rem'}}/></td>
+                            <td><img src={service_phone} className="icon"/></td>
                             <td>客服电话</td>
-                            <td><img src={arrow_right}  style={{width: '0.7rem'}}/></td>
+                            <td><img src={arrow_right} className="arrow"/></td>
                         </tr>
                         </tbody>
                     </table>

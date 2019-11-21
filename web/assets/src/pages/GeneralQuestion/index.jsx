@@ -23,6 +23,9 @@ class GeneralQuestion extends Component {
                         this.props.history.push("/personal")
                     }).bind(this)}
                 />
+                <div className="content">
+                    暂无内容
+                </div>
             </div>
         );
     }

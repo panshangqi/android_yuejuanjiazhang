@@ -16,11 +16,11 @@ class ExamAnalysis extends Component {
         super(props);
         console.log('ExamAnalysis')
         console.log(props)
-        // 2.8rem 2.5rem 2.4rem
-        var tableListHeight = $(window).height() - getRem2Px(2.8) - getRem2Px(2.5) - getRem2Px(2.4)*2;
+        console.log($(window).height())
+        var tableListHeight = $(window).height() - getRealPX(55) - getRealPX(50) - getRealPX(50)*2;
         var imageListHeight = tableListHeight * 0.338;
-        this.tableRowHeight = getRem2Px(2.4)
-        console.log('DETAULT_PX = ' +DETAULT_PX)
+        this.tableRowHeight = getRealPX(40)
+
         tableListHeight = tableListHeight * 0.66;
         this.state = {
             question_list: [],

@@ -14,10 +14,11 @@ class Login extends Component {
         qishi.util.log('userid='+userid+',ip='+ip)
         console.log(userid, ip)
         this.state = {
-            username: userid ? userid : "10000073",
-            password: "0",
-            ip: ip ? ip: "114.116.116.99"
+            username: userid ? userid : "",
+            password: "",
+            ip: ip ? ip: ""
         };
+        //10000073 0 114.116.116.99:88
 
     }
     componentDidMount(){

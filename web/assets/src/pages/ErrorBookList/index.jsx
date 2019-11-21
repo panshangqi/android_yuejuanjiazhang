@@ -61,7 +61,7 @@ class ErrorBookList extends Component {
                         <div className="score">{item.studentscore}分/{item.fullscore}分</div>
                     </div>
                     <div className="image">
-                        <img src={qishi.util.make_image_url2(item.answer+'')}/>
+                        <img src={qishi.util.make_image_url2(item.questiondry+'')}/>
                     </div>
                 </div>
             )

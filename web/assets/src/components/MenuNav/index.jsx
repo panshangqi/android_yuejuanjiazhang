@@ -99,7 +99,7 @@ class MenuNav extends Component {
                     key={'navli_'+keyid}
                     style={{
                         color: this.state.subject_id == item.subjectid ? qishi.config.theme_color: '#444',
-                        fontSize: this.state.subject_id == item.subjectid ? '0.85rem': '0.8rem'
+                        fontSize: this.state.subject_id == item.subjectid ? getRealPX(18)+'px': getRealPX(16)+'px'
                     }}
                 >
                     {item.subjectname}
